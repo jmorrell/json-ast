@@ -21,8 +21,8 @@ Some(
         ],
         start: Position {
             line: 1,
-            column: 4,
-            index: 3
+            column: 2,
+            index: 1
         },
         end: Position {
             line: 1,

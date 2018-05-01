@@ -73,8 +73,8 @@ Some(
         ],
         start: Position {
             line: 1,
-            column: 20,
-            index: 19
+            column: 1,
+            index: 0
         },
         end: Position {
             line: 1,

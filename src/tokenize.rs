@@ -324,7 +324,7 @@ fn parse_number(input: &str, index: usize, line: usize, column: usize) -> Option
     Some(Match {
       kind: TokenType::Number,
       line: line,
-      column: column + passed_value_index - start_index - 1,
+      column: column + passed_value_index - start_index,
       index: passed_value_index,
       value: Some(input[start_index..passed_value_index].to_string()),
     })

@@ -142,9 +142,9 @@ Some(
                                     }
                                 ],
                                 start: Position {
-                                    line: 6,
-                                    column: 5,
-                                    index: 68
+                                    line: 4,
+                                    column: 11,
+                                    index: 33
                                 },
                                 end: Position {
                                     line: 6,

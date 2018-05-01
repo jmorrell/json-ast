@@ -200,7 +200,7 @@ fn parse_array(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<V
             }
             ArrayStates::Value => match token.kind {
                 TokenType::RightBracket => {
-                    let start_token = &tokens[*index];
+                    let start_token = &tokens[start_index];
                     *index += 1;
                     return Some(Value::Array {
                         children,
