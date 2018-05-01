@@ -40,6 +40,7 @@ enum Escapes {
   HexadecimalDigits,
 }
 
+#[derive(Debug)]
 enum StringStates {
   Start,
   StartQuoteOrChar,
@@ -66,29 +67,29 @@ struct Match {
   value: Option<String>,
 }
 
-fn map_punctuator_tokens(c: char) -> Option<TokenType> {
+fn map_punctuator_tokens(c: u8) -> Option<TokenType> {
   match c {
-    '{' => Some(TokenType::LeftBrace),
-    '}' => Some(TokenType::RightBrace),
-    '[' => Some(TokenType::LeftBracket),
-    ']' => Some(TokenType::RightBracket),
-    ':' => Some(TokenType::Colon),
-    ',' => Some(TokenType::Comma),
+    b'{' => Some(TokenType::LeftBrace),
+    b'}' => Some(TokenType::RightBrace),
+    b'[' => Some(TokenType::LeftBracket),
+    b']' => Some(TokenType::RightBracket),
+    b':' => Some(TokenType::Colon),
+    b',' => Some(TokenType::Comma),
     _ => None,
   }
 }
 
-fn map_escapes(c: char) -> Option<Escapes> {
+fn map_escapes(c: u8) -> Option<Escapes> {
   match c {
-    '"' => Some(Escapes::Quotation),
-    '\\' => Some(Escapes::ReverseSolidus),
-    '/' => Some(Escapes::Solidus),
-    'b' => Some(Escapes::Backspace),
-    'f' => Some(Escapes::FormFeed),
-    'n' => Some(Escapes::NewLine),
-    'r' => Some(Escapes::CarriageReturn),
-    't' => Some(Escapes::HorizontalTab),
-    'u' => Some(Escapes::HexadecimalDigits),
+    b'"' => Some(Escapes::Quotation),
+    b'\\' => Some(Escapes::ReverseSolidus),
+    b'/' => Some(Escapes::Solidus),
+    b'b' => Some(Escapes::Backspace),
+    b'f' => Some(Escapes::FormFeed),
+    b'n' => Some(Escapes::NewLine),
+    b'r' => Some(Escapes::CarriageReturn),
+    b't' => Some(Escapes::HorizontalTab),
+    b'u' => Some(Escapes::HexadecimalDigits),
     _ => None,
   }
 }
@@ -96,12 +97,12 @@ fn map_escapes(c: char) -> Option<Escapes> {
 // Parsers
 
 fn parse_whitespace(input: &str, index: usize, line: usize, column: usize) -> Option<Position> {
-  let c = input.chars().nth(index);
+  let c = input.as_bytes()[index];
 
   match c {
     // CR (Unix)
-    Some('\r') => {
-      if input.chars().nth(index) == Some('\n') {
+    b'\r' => {
+      if input.as_bytes()[index] == b'\n' {
         Some(Position {
           index: index + 2,
           line: line + 1,
@@ -116,12 +117,12 @@ fn parse_whitespace(input: &str, index: usize, line: usize, column: usize) -> Op
       }
     }
     // LF (MacOS)
-    Some('\n') => Some(Position {
+    b'\n' => Some(Position {
       index: index + 1,
       line: line + 1,
       column: 1,
     }),
-    Some('\t') | Some(' ') => Some(Position {
+    b'\t' | b' ' => Some(Position {
       index: index + 1,
       line,
       column: column + 1,
@@ -131,9 +132,9 @@ fn parse_whitespace(input: &str, index: usize, line: usize, column: usize) -> Op
 }
 
 fn parse_char(input: &str, index: usize, line: usize, column: usize) -> Option<Match> {
-  let c = input.chars().nth(index);
+  let c = input.as_bytes()[index];
 
-  match map_punctuator_tokens(c.unwrap()) {
+  match map_punctuator_tokens(c) {
     Some(t) => Some(Match {
       kind: t,
       line,
@@ -146,8 +147,8 @@ fn parse_char(input: &str, index: usize, line: usize, column: usize) -> Option<M
 }
 
 fn parse_keyword(input: &str, index: usize, line: usize, column: usize) -> Option<Match> {
-  let len = input.len();
-  if len >= index + 4 && &input[index..index + 4] == "true" {
+  let rest = &input[index..];
+  if rest.starts_with("true") {
     Some(Match {
       kind: TokenType::True,
       line,
@@ -155,7 +156,7 @@ fn parse_keyword(input: &str, index: usize, line: usize, column: usize) -> Optio
       index: index + 4,
       value: Some("true".to_string()),
     })
-  } else if len >= index + 4 && &input[index..index + 4] == "null" {
+  } else if rest.starts_with("null") {
     Some(Match {
       kind: TokenType::Null,
       line,
@@ -163,7 +164,7 @@ fn parse_keyword(input: &str, index: usize, line: usize, column: usize) -> Optio
       index: index + 4,
       value: Some("null".to_string()),
     })
-  } else if len >= index + 5 && &input[index..index + 5] == "false" {
+  } else if rest.starts_with("false") {
     Some(Match {
       kind: TokenType::False,
       line,
@@ -178,58 +179,49 @@ fn parse_keyword(input: &str, index: usize, line: usize, column: usize) -> Optio
 
 fn parse_string(input: &str, index: usize, line: usize, column: usize) -> Option<Match> {
   let mut i = index;
-  // let mut passed_value_index = index;
-  let mut buffer = String::new();
+  let mut buffer = Vec::new();
   let mut state = StringStates::Start;
 
   while i < input.len() {
-    let c = input.chars().nth(i).unwrap();
+    let c = input.as_bytes()[i];
     match state {
       StringStates::Start => match c {
-        '"' => {
+        b'"' => {
           i += 1;
           state = StringStates::StartQuoteOrChar;
         }
         _ => return None,
       },
       StringStates::StartQuoteOrChar => match c {
-        '\\' => {
-          buffer.push_str(&c.to_string());
+        b'\\' => {
+          buffer.push(c);
           i += 1;
-          // passed_value_index = i;
           state = StringStates::Escape;
         }
-        '"' => {
+        b'"' => {
           i += 1;
-          // passed_value_index = i;
           return Some(Match {
             kind: TokenType::String,
             line: line,
             column: column + i - index,
             index: i,
-            // TODO: isn't passed_value_index just always i here?
-            value: Some(input[index..i].to_string()),
+            value: Some(String::from_utf8(buffer).unwrap()),
           });
         }
         _ => {
           i += 1;
-          // passed_value_index = i;
-          buffer.push_str(&c.to_string());
+          buffer.push(c);
         }
       },
       StringStates::Escape => match map_escapes(c) {
         Some(Escapes::HexadecimalDigits) => {
-          buffer.push_str(&c.to_string());
+          buffer.push(c);
           i += 1;
-          // passed_value_index = i;
           for _ in 0..4 {
-            if let Some(ch) = input.chars().nth(i) {
-              if ch.is_ascii_hexdigit() {
-                buffer.push_str(&ch.to_string());
-                i += 1;
-              } else {
-                return None;
-              }
+            let ch = input.as_bytes()[i];
+            if ch.is_ascii_hexdigit() {
+              buffer.push(ch);
+              i += 1;
             } else {
               return None;
             }
@@ -237,9 +229,8 @@ fn parse_string(input: &str, index: usize, line: usize, column: usize) -> Option
           state = StringStates::StartQuoteOrChar;
         }
         Some(_t) => {
-          buffer.push_str(&c.to_string());
+          buffer.push(c);
           i += 1;
-          // passed_value_index = i;
           state = StringStates::StartQuoteOrChar;
         }
         _ => {
@@ -258,15 +249,15 @@ fn parse_number(input: &str, index: usize, line: usize, column: usize) -> Option
   let mut state = NumberStates::Start;
 
   while i < input.len() {
-    let c = input.chars().nth(i).unwrap();
+    let c = input.as_bytes()[i];
     match state {
       NumberStates::Start => match c {
-        '-' => state = NumberStates::Minus,
-        '0' => {
+        b'-' => state = NumberStates::Minus,
+        b'0' => {
           passed_value_index = i + 1;
           state = NumberStates::Zero;
         }
-        '1'...'9' => {
+        b'1'...b'9' => {
           passed_value_index = i + 1;
           state = NumberStates::Digit;
         }
@@ -274,11 +265,11 @@ fn parse_number(input: &str, index: usize, line: usize, column: usize) -> Option
       },
 
       NumberStates::Minus => match c {
-        '0' => {
+        b'0' => {
           passed_value_index = i + 1;
           state = NumberStates::Zero;
         }
-        '1'...'9' => {
+        b'1'...b'9' => {
           passed_value_index = i + 1;
           state = NumberStates::Digit;
         }
@@ -286,20 +277,20 @@ fn parse_number(input: &str, index: usize, line: usize, column: usize) -> Option
       },
 
       NumberStates::Zero => match c {
-        '.' => state = NumberStates::Point,
-        'e' | 'E' => state = NumberStates::Exp,
+        b'.' => state = NumberStates::Point,
+        b'e' | b'E' => state = NumberStates::Exp,
         _ => break,
       },
 
       NumberStates::Digit => match c {
-        '0'...'9' => passed_value_index = i + 1,
-        '.' => state = NumberStates::Point,
-        'e' | 'E' => state = NumberStates::Exp,
+        b'0'...b'9' => passed_value_index = i + 1,
+        b'.' => state = NumberStates::Point,
+        b'e' | b'E' => state = NumberStates::Exp,
         _ => break,
       },
 
       NumberStates::Point => match c {
-        '0'...'9' => {
+        b'0'...b'9' => {
           passed_value_index = i + 1;
           state = NumberStates::DigitFraction;
         }
@@ -307,14 +298,14 @@ fn parse_number(input: &str, index: usize, line: usize, column: usize) -> Option
       },
 
       NumberStates::DigitFraction => match c {
-        '0'...'9' => passed_value_index = i + 1,
-        'e' | 'E' => state = NumberStates::Exp,
+        b'0'...b'9' => passed_value_index = i + 1,
+        b'e' | b'E' => state = NumberStates::Exp,
         _ => break,
       },
 
       NumberStates::Exp => match c {
-        '+' | '-' => state = NumberStates::ExpDigitOrSign,
-        '0'...'9' => {
+        b'+' | b'-' => state = NumberStates::ExpDigitOrSign,
+        b'0'...b'9' => {
           passed_value_index = i + 1;
           state = NumberStates::ExpDigitOrSign;
         }
@@ -322,7 +313,7 @@ fn parse_number(input: &str, index: usize, line: usize, column: usize) -> Option
       },
 
       NumberStates::ExpDigitOrSign => match c {
-        '0'...'9' => passed_value_index = i + 1,
+        b'0'...b'9' => passed_value_index = i + 1,
         _ => break,
       },
     }
@@ -349,6 +340,14 @@ pub fn tokenize(input: &str) -> Vec<Token> {
   let mut tokens: Vec<Token> = Vec::new();
 
   while index < input.len() {
+    // let c = input.as_bytes()[index]; 
+    // let mut st = Vec::new();
+    // st.push(c);
+    // println!("index: {}, c: {}, c: {:?}", index, c, String::from_utf8(st));
+    // if index > 5 {
+    //   println!("{:#?}", tokens);
+    // }
+
     if let Some(pos) = parse_whitespace(input, index, line, column) {
       line = pos.line;
       column = pos.column;

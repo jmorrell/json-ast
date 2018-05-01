@@ -23,7 +23,7 @@ fn pass_0() {
   "##);
   assert!(true);
 }
-/*
+
 #[test]
 fn pass_1() {
   parse(r##"
@@ -770,4 +770,3 @@ mod tests {
 
 }
 
-*/
