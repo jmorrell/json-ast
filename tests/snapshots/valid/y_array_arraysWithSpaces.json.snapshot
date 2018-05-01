@@ -1,0 +1,33 @@
+JSON:
+[[]   ]
+
+Value:
+Some(
+    Array {
+        children: [
+            Array {
+                children: [],
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 4,
+                    index: 3
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 7,
+            index: 6
+        },
+        end: Position {
+            line: 1,
+            column: 8,
+            index: 7
+        }
+    }
+)

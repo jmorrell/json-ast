@@ -1,0 +1,354 @@
+JSON:
+{
+  "a<": 2,
+  "b)": {
+    "c(": [
+      "3!", "4:", "5;", "6'"
+    ],
+    "d&": {
+      "e!": "~_~"
+    },
+    ":e": "𠮷",
+    " f ": "*±*∆"
+  }
+}
+
+
+Value:
+Some(
+    Object {
+        children: [
+            Property {
+                key: Identifier {
+                    raw: "a<",
+                    start: Position {
+                        line: 2,
+                        column: 3,
+                        index: 4
+                    },
+                    end: Position {
+                        line: 2,
+                        column: 7,
+                        index: 8
+                    }
+                },
+                value: Number {
+                    raw: "2",
+                    start: Position {
+                        line: 2,
+                        column: 9,
+                        index: 10
+                    },
+                    end: Position {
+                        line: 2,
+                        column: 10,
+                        index: 11
+                    }
+                },
+                start: Position {
+                    line: 2,
+                    column: 3,
+                    index: 4
+                },
+                end: Position {
+                    line: 2,
+                    column: 10,
+                    index: 11
+                }
+            },
+            Property {
+                key: Identifier {
+                    raw: "b)",
+                    start: Position {
+                        line: 3,
+                        column: 3,
+                        index: 15
+                    },
+                    end: Position {
+                        line: 3,
+                        column: 7,
+                        index: 19
+                    }
+                },
+                value: Object {
+                    children: [
+                        Property {
+                            key: Identifier {
+                                raw: "c(",
+                                start: Position {
+                                    line: 4,
+                                    column: 5,
+                                    index: 27
+                                },
+                                end: Position {
+                                    line: 4,
+                                    column: 9,
+                                    index: 31
+                                }
+                            },
+                            value: Array {
+                                children: [
+                                    String {
+                                        raw: "3!",
+                                        start: Position {
+                                            line: 5,
+                                            column: 7,
+                                            index: 41
+                                        },
+                                        end: Position {
+                                            line: 5,
+                                            column: 11,
+                                            index: 45
+                                        }
+                                    },
+                                    String {
+                                        raw: "4:",
+                                        start: Position {
+                                            line: 5,
+                                            column: 13,
+                                            index: 47
+                                        },
+                                        end: Position {
+                                            line: 5,
+                                            column: 17,
+                                            index: 51
+                                        }
+                                    },
+                                    String {
+                                        raw: "5;",
+                                        start: Position {
+                                            line: 5,
+                                            column: 19,
+                                            index: 53
+                                        },
+                                        end: Position {
+                                            line: 5,
+                                            column: 23,
+                                            index: 57
+                                        }
+                                    },
+                                    String {
+                                        raw: "6\'",
+                                        start: Position {
+                                            line: 5,
+                                            column: 25,
+                                            index: 59
+                                        },
+                                        end: Position {
+                                            line: 5,
+                                            column: 29,
+                                            index: 63
+                                        }
+                                    }
+                                ],
+                                start: Position {
+                                    line: 6,
+                                    column: 5,
+                                    index: 68
+                                },
+                                end: Position {
+                                    line: 6,
+                                    column: 6,
+                                    index: 69
+                                }
+                            },
+                            start: Position {
+                                line: 4,
+                                column: 5,
+                                index: 27
+                            },
+                            end: Position {
+                                line: 6,
+                                column: 6,
+                                index: 69
+                            }
+                        },
+                        Property {
+                            key: Identifier {
+                                raw: "d&",
+                                start: Position {
+                                    line: 7,
+                                    column: 5,
+                                    index: 75
+                                },
+                                end: Position {
+                                    line: 7,
+                                    column: 9,
+                                    index: 79
+                                }
+                            },
+                            value: Object {
+                                children: [
+                                    Property {
+                                        key: Identifier {
+                                            raw: "e!",
+                                            start: Position {
+                                                line: 8,
+                                                column: 7,
+                                                index: 89
+                                            },
+                                            end: Position {
+                                                line: 8,
+                                                column: 11,
+                                                index: 93
+                                            }
+                                        },
+                                        value: String {
+                                            raw: "~_~",
+                                            start: Position {
+                                                line: 8,
+                                                column: 13,
+                                                index: 95
+                                            },
+                                            end: Position {
+                                                line: 8,
+                                                column: 18,
+                                                index: 100
+                                            }
+                                        },
+                                        start: Position {
+                                            line: 8,
+                                            column: 7,
+                                            index: 89
+                                        },
+                                        end: Position {
+                                            line: 8,
+                                            column: 18,
+                                            index: 100
+                                        }
+                                    }
+                                ],
+                                start: Position {
+                                    line: 7,
+                                    column: 11,
+                                    index: 81
+                                },
+                                end: Position {
+                                    line: 9,
+                                    column: 6,
+                                    index: 106
+                                }
+                            },
+                            start: Position {
+                                line: 7,
+                                column: 5,
+                                index: 75
+                            },
+                            end: Position {
+                                line: 9,
+                                column: 6,
+                                index: 106
+                            }
+                        },
+                        Property {
+                            key: Identifier {
+                                raw: ":e",
+                                start: Position {
+                                    line: 10,
+                                    column: 5,
+                                    index: 112
+                                },
+                                end: Position {
+                                    line: 10,
+                                    column: 9,
+                                    index: 116
+                                }
+                            },
+                            value: String {
+                                raw: "𠮷",
+                                start: Position {
+                                    line: 10,
+                                    column: 11,
+                                    index: 118
+                                },
+                                end: Position {
+                                    line: 10,
+                                    column: 17,
+                                    index: 124
+                                }
+                            },
+                            start: Position {
+                                line: 10,
+                                column: 5,
+                                index: 112
+                            },
+                            end: Position {
+                                line: 10,
+                                column: 17,
+                                index: 124
+                            }
+                        },
+                        Property {
+                            key: Identifier {
+                                raw: " f ",
+                                start: Position {
+                                    line: 11,
+                                    column: 5,
+                                    index: 130
+                                },
+                                end: Position {
+                                    line: 11,
+                                    column: 10,
+                                    index: 135
+                                }
+                            },
+                            value: String {
+                                raw: "*±*∆\u{f8ff}",
+                                start: Position {
+                                    line: 11,
+                                    column: 12,
+                                    index: 137
+                                },
+                                end: Position {
+                                    line: 11,
+                                    column: 24,
+                                    index: 149
+                                }
+                            },
+                            start: Position {
+                                line: 11,
+                                column: 5,
+                                index: 130
+                            },
+                            end: Position {
+                                line: 11,
+                                column: 24,
+                                index: 149
+                            }
+                        }
+                    ],
+                    start: Position {
+                        line: 3,
+                        column: 9,
+                        index: 21
+                    },
+                    end: Position {
+                        line: 12,
+                        column: 4,
+                        index: 153
+                    }
+                },
+                start: Position {
+                    line: 3,
+                    column: 3,
+                    index: 15
+                },
+                end: Position {
+                    line: 12,
+                    column: 4,
+                    index: 153
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 1,
+            index: 0
+        },
+        end: Position {
+            line: 13,
+            column: 2,
+            index: 155
+        }
+    }
+)

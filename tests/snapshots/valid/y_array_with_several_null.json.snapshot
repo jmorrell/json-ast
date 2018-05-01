@@ -1,0 +1,85 @@
+JSON:
+[1,null,null,null,2]
+
+Value:
+Some(
+    Array {
+        children: [
+            Number {
+                raw: "1",
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 3,
+                    index: 2
+                }
+            },
+            Null {
+                raw: "null",
+                start: Position {
+                    line: 1,
+                    column: 4,
+                    index: 3
+                },
+                end: Position {
+                    line: 1,
+                    column: 8,
+                    index: 7
+                }
+            },
+            Null {
+                raw: "null",
+                start: Position {
+                    line: 1,
+                    column: 9,
+                    index: 8
+                },
+                end: Position {
+                    line: 1,
+                    column: 13,
+                    index: 12
+                }
+            },
+            Null {
+                raw: "null",
+                start: Position {
+                    line: 1,
+                    column: 14,
+                    index: 13
+                },
+                end: Position {
+                    line: 1,
+                    column: 18,
+                    index: 17
+                }
+            },
+            Number {
+                raw: "2",
+                start: Position {
+                    line: 1,
+                    column: 19,
+                    index: 18
+                },
+                end: Position {
+                    line: 1,
+                    column: 20,
+                    index: 19
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 20,
+            index: 19
+        },
+        end: Position {
+            line: 1,
+            column: 21,
+            index: 20
+        }
+    }
+)

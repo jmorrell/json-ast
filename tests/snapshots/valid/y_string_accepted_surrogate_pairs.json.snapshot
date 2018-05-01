@@ -1,0 +1,33 @@
+JSON:
+["\ud83d\ude39\ud83d\udc8d"]
+
+Value:
+Some(
+    Array {
+        children: [
+            String {
+                raw: "\\ud83d\\ude39\\ud83d\\udc8d",
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 28,
+                    index: 27
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 28,
+            index: 27
+        },
+        end: Position {
+            line: 1,
+            column: 29,
+            index: 28
+        }
+    }
+)

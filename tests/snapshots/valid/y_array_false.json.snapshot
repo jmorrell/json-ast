@@ -1,0 +1,33 @@
+JSON:
+[false]
+
+Value:
+Some(
+    Array {
+        children: [
+            Boolean {
+                raw: "false",
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 7,
+                    index: 6
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 7,
+            index: 6
+        },
+        end: Position {
+            line: 1,
+            column: 8,
+            index: 7
+        }
+    }
+)

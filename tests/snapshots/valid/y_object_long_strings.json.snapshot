@@ -1,0 +1,149 @@
+JSON:
+{"x":[{"id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}], "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}
+
+Value:
+Some(
+    Object {
+        children: [
+            Property {
+                key: Identifier {
+                    raw: "x",
+                    start: Position {
+                        line: 1,
+                        column: 2,
+                        index: 1
+                    },
+                    end: Position {
+                        line: 1,
+                        column: 5,
+                        index: 4
+                    }
+                },
+                value: Array {
+                    children: [
+                        Object {
+                            children: [
+                                Property {
+                                    key: Identifier {
+                                        raw: "id",
+                                        start: Position {
+                                            line: 1,
+                                            column: 8,
+                                            index: 7
+                                        },
+                                        end: Position {
+                                            line: 1,
+                                            column: 12,
+                                            index: 11
+                                        }
+                                    },
+                                    value: String {
+                                        raw: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+                                        start: Position {
+                                            line: 1,
+                                            column: 14,
+                                            index: 13
+                                        },
+                                        end: Position {
+                                            line: 1,
+                                            column: 56,
+                                            index: 55
+                                        }
+                                    },
+                                    start: Position {
+                                        line: 1,
+                                        column: 8,
+                                        index: 7
+                                    },
+                                    end: Position {
+                                        line: 1,
+                                        column: 56,
+                                        index: 55
+                                    }
+                                }
+                            ],
+                            start: Position {
+                                line: 1,
+                                column: 7,
+                                index: 6
+                            },
+                            end: Position {
+                                line: 1,
+                                column: 57,
+                                index: 56
+                            }
+                        }
+                    ],
+                    start: Position {
+                        line: 1,
+                        column: 57,
+                        index: 56
+                    },
+                    end: Position {
+                        line: 1,
+                        column: 58,
+                        index: 57
+                    }
+                },
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 58,
+                    index: 57
+                }
+            },
+            Property {
+                key: Identifier {
+                    raw: "id",
+                    start: Position {
+                        line: 1,
+                        column: 60,
+                        index: 59
+                    },
+                    end: Position {
+                        line: 1,
+                        column: 64,
+                        index: 63
+                    }
+                },
+                value: String {
+                    raw: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+                    start: Position {
+                        line: 1,
+                        column: 66,
+                        index: 65
+                    },
+                    end: Position {
+                        line: 1,
+                        column: 108,
+                        index: 107
+                    }
+                },
+                start: Position {
+                    line: 1,
+                    column: 60,
+                    index: 59
+                },
+                end: Position {
+                    line: 1,
+                    column: 108,
+                    index: 107
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 1,
+            index: 0
+        },
+        end: Position {
+            line: 1,
+            column: 109,
+            index: 108
+        }
+    }
+)

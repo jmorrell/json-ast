@@ -1,0 +1,19 @@
+JSON:
+-0.1
+
+Value:
+Some(
+    Number {
+        raw: "-0.1",
+        start: Position {
+            line: 1,
+            column: 1,
+            index: 0
+        },
+        end: Position {
+            line: 1,
+            column: 5,
+            index: 4
+        }
+    }
+)

@@ -1,0 +1,2926 @@
+JSON:
+[
+  {
+    "_id": "574d7238062156c6d9e6de99",
+    "index": 0,
+    "guid": "c99bf348-0345-49fd-be52-d0da82bdd47f",
+    "isActive": true,
+    "balance": "$1,087.03",
+    "picture": "http://placehold.it/32x32",
+    "age": 25,
+    "eyeColor": "brown",
+    "name": {
+      "first": "Stacie",
+      "last": "Sargent"
+    },
+    "company": "DAISU",
+    "email": "stacie.sargent@daisu.com",
+    "phone": "+1 (830) 537-3936",
+    "address": "547 Charles Place, Weogufka, Marshall Islands, 6627",
+    "about": "Exercitation nisi incididunt exercitation sit Lorem nostrud commodo incididunt cillum amet. Laboris proident non nostrud dolor esse exercitation enim sit culpa Lorem qui. Laborum aliquip pariatur mollit aute. Et consequat Lorem in cillum sunt dolore aute voluptate anim commodo. Excepteur labore proident consequat nulla occaecat in consequat minim.",
+    "registered": "Sunday, October 4, 2015 3:58 PM",
+    "latitude": "45.437159",
+    "longitude": "-77.052972",
+    "tags": [
+      "veniam",
+      "et",
+      "cillum",
+      "ex",
+      "nisi"
+    ],
+    "range": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Juliana Valentine"
+      },
+      {
+        "id": 1,
+        "name": "Robert Eaton"
+      },
+      {
+        "id": 2,
+        "name": "Socorro Herrera"
+      }
+    ],
+    "greeting": "Hello, Stacie! You have 6 unread messages.",
+    "favoriteFruit": "banana"
+  },
+  {
+    "_id": "574d7238bd4c01db9e4a4d5b",
+    "index": 1,
+    "guid": "5fd3fc48-e39e-4ee4-bc3a-6eb12bed2653",
+    "isActive": false,
+    "balance": "$1,696.52",
+    "picture": "http://placehold.it/32x32",
+    "age": 32,
+    "eyeColor": "blue",
+    "name": {
+      "first": "Ada",
+      "last": "Stokes"
+    },
+    "company": "FARMAGE",
+    "email": "ada.stokes@farmage.biz",
+    "phone": "+1 (875) 486-3569",
+    "address": "361 Howard Place, Wyano, Michigan, 346",
+    "about": "Culpa esse laboris enim occaecat voluptate non reprehenderit officia amet eu ad laboris officia. Exercitation qui occaecat veniam ea tempor. Reprehenderit laborum magna occaecat sit tempor eiusmod est quis ea. Sunt minim labore et eu ex. Pariatur do proident nisi sunt commodo. Deserunt est ad pariatur laboris officia. Pariatur anim deserunt excepteur voluptate amet.",
+    "registered": "Wednesday, April 16, 2014 7:23 PM",
+    "latitude": "-45.133396",
+    "longitude": "43.593917",
+    "tags": [
+      "qui",
+      "eiusmod",
+      "nisi",
+      "officia",
+      "in"
+    ],
+    "range": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Campos Pruitt"
+      },
+      {
+        "id": 1,
+        "name": "Barnett Sykes"
+      },
+      {
+        "id": 2,
+        "name": "Trudy Collier"
+      }
+    ],
+    "greeting": "Hello, Ada! You have 8 unread messages.",
+    "favoriteFruit": "banana"
+  }
+]
+
+
+Value:
+Some(
+    Array {
+        children: [
+            Object {
+                children: [
+                    Property {
+                        key: Identifier {
+                            raw: "_id",
+                            start: Position {
+                                line: 3,
+                                column: 5,
+                                index: 10
+                            },
+                            end: Position {
+                                line: 3,
+                                column: 10,
+                                index: 15
+                            }
+                        },
+                        value: String {
+                            raw: "574d7238062156c6d9e6de99",
+                            start: Position {
+                                line: 3,
+                                column: 12,
+                                index: 17
+                            },
+                            end: Position {
+                                line: 3,
+                                column: 38,
+                                index: 43
+                            }
+                        },
+                        start: Position {
+                            line: 3,
+                            column: 5,
+                            index: 10
+                        },
+                        end: Position {
+                            line: 3,
+                            column: 38,
+                            index: 43
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "index",
+                            start: Position {
+                                line: 4,
+                                column: 5,
+                                index: 49
+                            },
+                            end: Position {
+                                line: 4,
+                                column: 12,
+                                index: 56
+                            }
+                        },
+                        value: Number {
+                            raw: "0",
+                            start: Position {
+                                line: 4,
+                                column: 14,
+                                index: 58
+                            },
+                            end: Position {
+                                line: 4,
+                                column: 15,
+                                index: 59
+                            }
+                        },
+                        start: Position {
+                            line: 4,
+                            column: 5,
+                            index: 49
+                        },
+                        end: Position {
+                            line: 4,
+                            column: 15,
+                            index: 59
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "guid",
+                            start: Position {
+                                line: 5,
+                                column: 5,
+                                index: 65
+                            },
+                            end: Position {
+                                line: 5,
+                                column: 11,
+                                index: 71
+                            }
+                        },
+                        value: String {
+                            raw: "c99bf348-0345-49fd-be52-d0da82bdd47f",
+                            start: Position {
+                                line: 5,
+                                column: 13,
+                                index: 73
+                            },
+                            end: Position {
+                                line: 5,
+                                column: 51,
+                                index: 111
+                            }
+                        },
+                        start: Position {
+                            line: 5,
+                            column: 5,
+                            index: 65
+                        },
+                        end: Position {
+                            line: 5,
+                            column: 51,
+                            index: 111
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "isActive",
+                            start: Position {
+                                line: 6,
+                                column: 5,
+                                index: 117
+                            },
+                            end: Position {
+                                line: 6,
+                                column: 15,
+                                index: 127
+                            }
+                        },
+                        value: Boolean {
+                            raw: "true",
+                            start: Position {
+                                line: 6,
+                                column: 17,
+                                index: 129
+                            },
+                            end: Position {
+                                line: 6,
+                                column: 21,
+                                index: 133
+                            }
+                        },
+                        start: Position {
+                            line: 6,
+                            column: 5,
+                            index: 117
+                        },
+                        end: Position {
+                            line: 6,
+                            column: 21,
+                            index: 133
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "balance",
+                            start: Position {
+                                line: 7,
+                                column: 5,
+                                index: 139
+                            },
+                            end: Position {
+                                line: 7,
+                                column: 14,
+                                index: 148
+                            }
+                        },
+                        value: String {
+                            raw: "$1,087.03",
+                            start: Position {
+                                line: 7,
+                                column: 16,
+                                index: 150
+                            },
+                            end: Position {
+                                line: 7,
+                                column: 27,
+                                index: 161
+                            }
+                        },
+                        start: Position {
+                            line: 7,
+                            column: 5,
+                            index: 139
+                        },
+                        end: Position {
+                            line: 7,
+                            column: 27,
+                            index: 161
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "picture",
+                            start: Position {
+                                line: 8,
+                                column: 5,
+                                index: 167
+                            },
+                            end: Position {
+                                line: 8,
+                                column: 14,
+                                index: 176
+                            }
+                        },
+                        value: String {
+                            raw: "http://placehold.it/32x32",
+                            start: Position {
+                                line: 8,
+                                column: 16,
+                                index: 178
+                            },
+                            end: Position {
+                                line: 8,
+                                column: 43,
+                                index: 205
+                            }
+                        },
+                        start: Position {
+                            line: 8,
+                            column: 5,
+                            index: 167
+                        },
+                        end: Position {
+                            line: 8,
+                            column: 43,
+                            index: 205
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "age",
+                            start: Position {
+                                line: 9,
+                                column: 5,
+                                index: 211
+                            },
+                            end: Position {
+                                line: 9,
+                                column: 10,
+                                index: 216
+                            }
+                        },
+                        value: Number {
+                            raw: "25",
+                            start: Position {
+                                line: 9,
+                                column: 12,
+                                index: 218
+                            },
+                            end: Position {
+                                line: 9,
+                                column: 14,
+                                index: 220
+                            }
+                        },
+                        start: Position {
+                            line: 9,
+                            column: 5,
+                            index: 211
+                        },
+                        end: Position {
+                            line: 9,
+                            column: 14,
+                            index: 220
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "eyeColor",
+                            start: Position {
+                                line: 10,
+                                column: 5,
+                                index: 226
+                            },
+                            end: Position {
+                                line: 10,
+                                column: 15,
+                                index: 236
+                            }
+                        },
+                        value: String {
+                            raw: "brown",
+                            start: Position {
+                                line: 10,
+                                column: 17,
+                                index: 238
+                            },
+                            end: Position {
+                                line: 10,
+                                column: 24,
+                                index: 245
+                            }
+                        },
+                        start: Position {
+                            line: 10,
+                            column: 5,
+                            index: 226
+                        },
+                        end: Position {
+                            line: 10,
+                            column: 24,
+                            index: 245
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "name",
+                            start: Position {
+                                line: 11,
+                                column: 5,
+                                index: 251
+                            },
+                            end: Position {
+                                line: 11,
+                                column: 11,
+                                index: 257
+                            }
+                        },
+                        value: Object {
+                            children: [
+                                Property {
+                                    key: Identifier {
+                                        raw: "first",
+                                        start: Position {
+                                            line: 12,
+                                            column: 7,
+                                            index: 267
+                                        },
+                                        end: Position {
+                                            line: 12,
+                                            column: 14,
+                                            index: 274
+                                        }
+                                    },
+                                    value: String {
+                                        raw: "Stacie",
+                                        start: Position {
+                                            line: 12,
+                                            column: 16,
+                                            index: 276
+                                        },
+                                        end: Position {
+                                            line: 12,
+                                            column: 24,
+                                            index: 284
+                                        }
+                                    },
+                                    start: Position {
+                                        line: 12,
+                                        column: 7,
+                                        index: 267
+                                    },
+                                    end: Position {
+                                        line: 12,
+                                        column: 24,
+                                        index: 284
+                                    }
+                                },
+                                Property {
+                                    key: Identifier {
+                                        raw: "last",
+                                        start: Position {
+                                            line: 13,
+                                            column: 7,
+                                            index: 292
+                                        },
+                                        end: Position {
+                                            line: 13,
+                                            column: 13,
+                                            index: 298
+                                        }
+                                    },
+                                    value: String {
+                                        raw: "Sargent",
+                                        start: Position {
+                                            line: 13,
+                                            column: 15,
+                                            index: 300
+                                        },
+                                        end: Position {
+                                            line: 13,
+                                            column: 24,
+                                            index: 309
+                                        }
+                                    },
+                                    start: Position {
+                                        line: 13,
+                                        column: 7,
+                                        index: 292
+                                    },
+                                    end: Position {
+                                        line: 13,
+                                        column: 24,
+                                        index: 309
+                                    }
+                                }
+                            ],
+                            start: Position {
+                                line: 11,
+                                column: 13,
+                                index: 259
+                            },
+                            end: Position {
+                                line: 14,
+                                column: 6,
+                                index: 315
+                            }
+                        },
+                        start: Position {
+                            line: 11,
+                            column: 5,
+                            index: 251
+                        },
+                        end: Position {
+                            line: 14,
+                            column: 6,
+                            index: 315
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "company",
+                            start: Position {
+                                line: 15,
+                                column: 5,
+                                index: 321
+                            },
+                            end: Position {
+                                line: 15,
+                                column: 14,
+                                index: 330
+                            }
+                        },
+                        value: String {
+                            raw: "DAISU",
+                            start: Position {
+                                line: 15,
+                                column: 16,
+                                index: 332
+                            },
+                            end: Position {
+                                line: 15,
+                                column: 23,
+                                index: 339
+                            }
+                        },
+                        start: Position {
+                            line: 15,
+                            column: 5,
+                            index: 321
+                        },
+                        end: Position {
+                            line: 15,
+                            column: 23,
+                            index: 339
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "email",
+                            start: Position {
+                                line: 16,
+                                column: 5,
+                                index: 345
+                            },
+                            end: Position {
+                                line: 16,
+                                column: 12,
+                                index: 352
+                            }
+                        },
+                        value: String {
+                            raw: "stacie.sargent@daisu.com",
+                            start: Position {
+                                line: 16,
+                                column: 14,
+                                index: 354
+                            },
+                            end: Position {
+                                line: 16,
+                                column: 40,
+                                index: 380
+                            }
+                        },
+                        start: Position {
+                            line: 16,
+                            column: 5,
+                            index: 345
+                        },
+                        end: Position {
+                            line: 16,
+                            column: 40,
+                            index: 380
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "phone",
+                            start: Position {
+                                line: 17,
+                                column: 5,
+                                index: 386
+                            },
+                            end: Position {
+                                line: 17,
+                                column: 12,
+                                index: 393
+                            }
+                        },
+                        value: String {
+                            raw: "+1 (830) 537-3936",
+                            start: Position {
+                                line: 17,
+                                column: 14,
+                                index: 395
+                            },
+                            end: Position {
+                                line: 17,
+                                column: 33,
+                                index: 414
+                            }
+                        },
+                        start: Position {
+                            line: 17,
+                            column: 5,
+                            index: 386
+                        },
+                        end: Position {
+                            line: 17,
+                            column: 33,
+                            index: 414
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "address",
+                            start: Position {
+                                line: 18,
+                                column: 5,
+                                index: 420
+                            },
+                            end: Position {
+                                line: 18,
+                                column: 14,
+                                index: 429
+                            }
+                        },
+                        value: String {
+                            raw: "547 Charles Place, Weogufka, Marshall Islands, 6627",
+                            start: Position {
+                                line: 18,
+                                column: 16,
+                                index: 431
+                            },
+                            end: Position {
+                                line: 18,
+                                column: 69,
+                                index: 484
+                            }
+                        },
+                        start: Position {
+                            line: 18,
+                            column: 5,
+                            index: 420
+                        },
+                        end: Position {
+                            line: 18,
+                            column: 69,
+                            index: 484
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "about",
+                            start: Position {
+                                line: 19,
+                                column: 5,
+                                index: 490
+                            },
+                            end: Position {
+                                line: 19,
+                                column: 12,
+                                index: 497
+                            }
+                        },
+                        value: String {
+                            raw: "Exercitation nisi incididunt exercitation sit Lorem nostrud commodo incididunt cillum amet. Laboris proident non nostrud dolor esse exercitation enim sit culpa Lorem qui. Laborum aliquip pariatur mollit aute. Et consequat Lorem in cillum sunt dolore aute voluptate anim commodo. Excepteur labore proident consequat nulla occaecat in consequat minim.",
+                            start: Position {
+                                line: 19,
+                                column: 14,
+                                index: 499
+                            },
+                            end: Position {
+                                line: 19,
+                                column: 365,
+                                index: 850
+                            }
+                        },
+                        start: Position {
+                            line: 19,
+                            column: 5,
+                            index: 490
+                        },
+                        end: Position {
+                            line: 19,
+                            column: 365,
+                            index: 850
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "registered",
+                            start: Position {
+                                line: 20,
+                                column: 5,
+                                index: 856
+                            },
+                            end: Position {
+                                line: 20,
+                                column: 17,
+                                index: 868
+                            }
+                        },
+                        value: String {
+                            raw: "Sunday, October 4, 2015 3:58 PM",
+                            start: Position {
+                                line: 20,
+                                column: 19,
+                                index: 870
+                            },
+                            end: Position {
+                                line: 20,
+                                column: 52,
+                                index: 903
+                            }
+                        },
+                        start: Position {
+                            line: 20,
+                            column: 5,
+                            index: 856
+                        },
+                        end: Position {
+                            line: 20,
+                            column: 52,
+                            index: 903
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "latitude",
+                            start: Position {
+                                line: 21,
+                                column: 5,
+                                index: 909
+                            },
+                            end: Position {
+                                line: 21,
+                                column: 15,
+                                index: 919
+                            }
+                        },
+                        value: String {
+                            raw: "45.437159",
+                            start: Position {
+                                line: 21,
+                                column: 17,
+                                index: 921
+                            },
+                            end: Position {
+                                line: 21,
+                                column: 28,
+                                index: 932
+                            }
+                        },
+                        start: Position {
+                            line: 21,
+                            column: 5,
+                            index: 909
+                        },
+                        end: Position {
+                            line: 21,
+                            column: 28,
+                            index: 932
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "longitude",
+                            start: Position {
+                                line: 22,
+                                column: 5,
+                                index: 938
+                            },
+                            end: Position {
+                                line: 22,
+                                column: 16,
+                                index: 949
+                            }
+                        },
+                        value: String {
+                            raw: "-77.052972",
+                            start: Position {
+                                line: 22,
+                                column: 18,
+                                index: 951
+                            },
+                            end: Position {
+                                line: 22,
+                                column: 30,
+                                index: 963
+                            }
+                        },
+                        start: Position {
+                            line: 22,
+                            column: 5,
+                            index: 938
+                        },
+                        end: Position {
+                            line: 22,
+                            column: 30,
+                            index: 963
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "tags",
+                            start: Position {
+                                line: 23,
+                                column: 5,
+                                index: 969
+                            },
+                            end: Position {
+                                line: 23,
+                                column: 11,
+                                index: 975
+                            }
+                        },
+                        value: Array {
+                            children: [
+                                String {
+                                    raw: "veniam",
+                                    start: Position {
+                                        line: 24,
+                                        column: 7,
+                                        index: 985
+                                    },
+                                    end: Position {
+                                        line: 24,
+                                        column: 15,
+                                        index: 993
+                                    }
+                                },
+                                String {
+                                    raw: "et",
+                                    start: Position {
+                                        line: 25,
+                                        column: 7,
+                                        index: 1001
+                                    },
+                                    end: Position {
+                                        line: 25,
+                                        column: 11,
+                                        index: 1005
+                                    }
+                                },
+                                String {
+                                    raw: "cillum",
+                                    start: Position {
+                                        line: 26,
+                                        column: 7,
+                                        index: 1013
+                                    },
+                                    end: Position {
+                                        line: 26,
+                                        column: 15,
+                                        index: 1021
+                                    }
+                                },
+                                String {
+                                    raw: "ex",
+                                    start: Position {
+                                        line: 27,
+                                        column: 7,
+                                        index: 1029
+                                    },
+                                    end: Position {
+                                        line: 27,
+                                        column: 11,
+                                        index: 1033
+                                    }
+                                },
+                                String {
+                                    raw: "nisi",
+                                    start: Position {
+                                        line: 28,
+                                        column: 7,
+                                        index: 1041
+                                    },
+                                    end: Position {
+                                        line: 28,
+                                        column: 13,
+                                        index: 1047
+                                    }
+                                }
+                            ],
+                            start: Position {
+                                line: 29,
+                                column: 5,
+                                index: 1052
+                            },
+                            end: Position {
+                                line: 29,
+                                column: 6,
+                                index: 1053
+                            }
+                        },
+                        start: Position {
+                            line: 23,
+                            column: 5,
+                            index: 969
+                        },
+                        end: Position {
+                            line: 29,
+                            column: 6,
+                            index: 1053
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "range",
+                            start: Position {
+                                line: 30,
+                                column: 5,
+                                index: 1059
+                            },
+                            end: Position {
+                                line: 30,
+                                column: 12,
+                                index: 1066
+                            }
+                        },
+                        value: Array {
+                            children: [
+                                Number {
+                                    raw: "0",
+                                    start: Position {
+                                        line: 31,
+                                        column: 7,
+                                        index: 1076
+                                    },
+                                    end: Position {
+                                        line: 31,
+                                        column: 8,
+                                        index: 1077
+                                    }
+                                },
+                                Number {
+                                    raw: "1",
+                                    start: Position {
+                                        line: 32,
+                                        column: 7,
+                                        index: 1085
+                                    },
+                                    end: Position {
+                                        line: 32,
+                                        column: 8,
+                                        index: 1086
+                                    }
+                                },
+                                Number {
+                                    raw: "2",
+                                    start: Position {
+                                        line: 33,
+                                        column: 7,
+                                        index: 1094
+                                    },
+                                    end: Position {
+                                        line: 33,
+                                        column: 8,
+                                        index: 1095
+                                    }
+                                },
+                                Number {
+                                    raw: "3",
+                                    start: Position {
+                                        line: 34,
+                                        column: 7,
+                                        index: 1103
+                                    },
+                                    end: Position {
+                                        line: 34,
+                                        column: 8,
+                                        index: 1104
+                                    }
+                                },
+                                Number {
+                                    raw: "4",
+                                    start: Position {
+                                        line: 35,
+                                        column: 7,
+                                        index: 1112
+                                    },
+                                    end: Position {
+                                        line: 35,
+                                        column: 8,
+                                        index: 1113
+                                    }
+                                },
+                                Number {
+                                    raw: "5",
+                                    start: Position {
+                                        line: 36,
+                                        column: 7,
+                                        index: 1121
+                                    },
+                                    end: Position {
+                                        line: 36,
+                                        column: 8,
+                                        index: 1122
+                                    }
+                                },
+                                Number {
+                                    raw: "6",
+                                    start: Position {
+                                        line: 37,
+                                        column: 7,
+                                        index: 1130
+                                    },
+                                    end: Position {
+                                        line: 37,
+                                        column: 8,
+                                        index: 1131
+                                    }
+                                },
+                                Number {
+                                    raw: "7",
+                                    start: Position {
+                                        line: 38,
+                                        column: 7,
+                                        index: 1139
+                                    },
+                                    end: Position {
+                                        line: 38,
+                                        column: 8,
+                                        index: 1140
+                                    }
+                                },
+                                Number {
+                                    raw: "8",
+                                    start: Position {
+                                        line: 39,
+                                        column: 7,
+                                        index: 1148
+                                    },
+                                    end: Position {
+                                        line: 39,
+                                        column: 8,
+                                        index: 1149
+                                    }
+                                },
+                                Number {
+                                    raw: "9",
+                                    start: Position {
+                                        line: 40,
+                                        column: 7,
+                                        index: 1157
+                                    },
+                                    end: Position {
+                                        line: 40,
+                                        column: 8,
+                                        index: 1158
+                                    }
+                                }
+                            ],
+                            start: Position {
+                                line: 41,
+                                column: 5,
+                                index: 1163
+                            },
+                            end: Position {
+                                line: 41,
+                                column: 6,
+                                index: 1164
+                            }
+                        },
+                        start: Position {
+                            line: 30,
+                            column: 5,
+                            index: 1059
+                        },
+                        end: Position {
+                            line: 41,
+                            column: 6,
+                            index: 1164
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "friends",
+                            start: Position {
+                                line: 42,
+                                column: 5,
+                                index: 1170
+                            },
+                            end: Position {
+                                line: 42,
+                                column: 14,
+                                index: 1179
+                            }
+                        },
+                        value: Array {
+                            children: [
+                                Object {
+                                    children: [
+                                        Property {
+                                            key: Identifier {
+                                                raw: "id",
+                                                start: Position {
+                                                    line: 44,
+                                                    column: 9,
+                                                    index: 1199
+                                                },
+                                                end: Position {
+                                                    line: 44,
+                                                    column: 13,
+                                                    index: 1203
+                                                }
+                                            },
+                                            value: Number {
+                                                raw: "0",
+                                                start: Position {
+                                                    line: 44,
+                                                    column: 15,
+                                                    index: 1205
+                                                },
+                                                end: Position {
+                                                    line: 44,
+                                                    column: 16,
+                                                    index: 1206
+                                                }
+                                            },
+                                            start: Position {
+                                                line: 44,
+                                                column: 9,
+                                                index: 1199
+                                            },
+                                            end: Position {
+                                                line: 44,
+                                                column: 16,
+                                                index: 1206
+                                            }
+                                        },
+                                        Property {
+                                            key: Identifier {
+                                                raw: "name",
+                                                start: Position {
+                                                    line: 45,
+                                                    column: 9,
+                                                    index: 1216
+                                                },
+                                                end: Position {
+                                                    line: 45,
+                                                    column: 15,
+                                                    index: 1222
+                                                }
+                                            },
+                                            value: String {
+                                                raw: "Juliana Valentine",
+                                                start: Position {
+                                                    line: 45,
+                                                    column: 17,
+                                                    index: 1224
+                                                },
+                                                end: Position {
+                                                    line: 45,
+                                                    column: 36,
+                                                    index: 1243
+                                                }
+                                            },
+                                            start: Position {
+                                                line: 45,
+                                                column: 9,
+                                                index: 1216
+                                            },
+                                            end: Position {
+                                                line: 45,
+                                                column: 36,
+                                                index: 1243
+                                            }
+                                        }
+                                    ],
+                                    start: Position {
+                                        line: 43,
+                                        column: 7,
+                                        index: 1189
+                                    },
+                                    end: Position {
+                                        line: 46,
+                                        column: 8,
+                                        index: 1251
+                                    }
+                                },
+                                Object {
+                                    children: [
+                                        Property {
+                                            key: Identifier {
+                                                raw: "id",
+                                                start: Position {
+                                                    line: 48,
+                                                    column: 9,
+                                                    index: 1269
+                                                },
+                                                end: Position {
+                                                    line: 48,
+                                                    column: 13,
+                                                    index: 1273
+                                                }
+                                            },
+                                            value: Number {
+                                                raw: "1",
+                                                start: Position {
+                                                    line: 48,
+                                                    column: 15,
+                                                    index: 1275
+                                                },
+                                                end: Position {
+                                                    line: 48,
+                                                    column: 16,
+                                                    index: 1276
+                                                }
+                                            },
+                                            start: Position {
+                                                line: 48,
+                                                column: 9,
+                                                index: 1269
+                                            },
+                                            end: Position {
+                                                line: 48,
+                                                column: 16,
+                                                index: 1276
+                                            }
+                                        },
+                                        Property {
+                                            key: Identifier {
+                                                raw: "name",
+                                                start: Position {
+                                                    line: 49,
+                                                    column: 9,
+                                                    index: 1286
+                                                },
+                                                end: Position {
+                                                    line: 49,
+                                                    column: 15,
+                                                    index: 1292
+                                                }
+                                            },
+                                            value: String {
+                                                raw: "Robert Eaton",
+                                                start: Position {
+                                                    line: 49,
+                                                    column: 17,
+                                                    index: 1294
+                                                },
+                                                end: Position {
+                                                    line: 49,
+                                                    column: 31,
+                                                    index: 1308
+                                                }
+                                            },
+                                            start: Position {
+                                                line: 49,
+                                                column: 9,
+                                                index: 1286
+                                            },
+                                            end: Position {
+                                                line: 49,
+                                                column: 31,
+                                                index: 1308
+                                            }
+                                        }
+                                    ],
+                                    start: Position {
+                                        line: 47,
+                                        column: 7,
+                                        index: 1259
+                                    },
+                                    end: Position {
+                                        line: 50,
+                                        column: 8,
+                                        index: 1316
+                                    }
+                                },
+                                Object {
+                                    children: [
+                                        Property {
+                                            key: Identifier {
+                                                raw: "id",
+                                                start: Position {
+                                                    line: 52,
+                                                    column: 9,
+                                                    index: 1334
+                                                },
+                                                end: Position {
+                                                    line: 52,
+                                                    column: 13,
+                                                    index: 1338
+                                                }
+                                            },
+                                            value: Number {
+                                                raw: "2",
+                                                start: Position {
+                                                    line: 52,
+                                                    column: 15,
+                                                    index: 1340
+                                                },
+                                                end: Position {
+                                                    line: 52,
+                                                    column: 16,
+                                                    index: 1341
+                                                }
+                                            },
+                                            start: Position {
+                                                line: 52,
+                                                column: 9,
+                                                index: 1334
+                                            },
+                                            end: Position {
+                                                line: 52,
+                                                column: 16,
+                                                index: 1341
+                                            }
+                                        },
+                                        Property {
+                                            key: Identifier {
+                                                raw: "name",
+                                                start: Position {
+                                                    line: 53,
+                                                    column: 9,
+                                                    index: 1351
+                                                },
+                                                end: Position {
+                                                    line: 53,
+                                                    column: 15,
+                                                    index: 1357
+                                                }
+                                            },
+                                            value: String {
+                                                raw: "Socorro Herrera",
+                                                start: Position {
+                                                    line: 53,
+                                                    column: 17,
+                                                    index: 1359
+                                                },
+                                                end: Position {
+                                                    line: 53,
+                                                    column: 34,
+                                                    index: 1376
+                                                }
+                                            },
+                                            start: Position {
+                                                line: 53,
+                                                column: 9,
+                                                index: 1351
+                                            },
+                                            end: Position {
+                                                line: 53,
+                                                column: 34,
+                                                index: 1376
+                                            }
+                                        }
+                                    ],
+                                    start: Position {
+                                        line: 51,
+                                        column: 7,
+                                        index: 1324
+                                    },
+                                    end: Position {
+                                        line: 54,
+                                        column: 8,
+                                        index: 1384
+                                    }
+                                }
+                            ],
+                            start: Position {
+                                line: 55,
+                                column: 5,
+                                index: 1389
+                            },
+                            end: Position {
+                                line: 55,
+                                column: 6,
+                                index: 1390
+                            }
+                        },
+                        start: Position {
+                            line: 42,
+                            column: 5,
+                            index: 1170
+                        },
+                        end: Position {
+                            line: 55,
+                            column: 6,
+                            index: 1390
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "greeting",
+                            start: Position {
+                                line: 56,
+                                column: 5,
+                                index: 1396
+                            },
+                            end: Position {
+                                line: 56,
+                                column: 15,
+                                index: 1406
+                            }
+                        },
+                        value: String {
+                            raw: "Hello, Stacie! You have 6 unread messages.",
+                            start: Position {
+                                line: 56,
+                                column: 17,
+                                index: 1408
+                            },
+                            end: Position {
+                                line: 56,
+                                column: 61,
+                                index: 1452
+                            }
+                        },
+                        start: Position {
+                            line: 56,
+                            column: 5,
+                            index: 1396
+                        },
+                        end: Position {
+                            line: 56,
+                            column: 61,
+                            index: 1452
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "favoriteFruit",
+                            start: Position {
+                                line: 57,
+                                column: 5,
+                                index: 1458
+                            },
+                            end: Position {
+                                line: 57,
+                                column: 20,
+                                index: 1473
+                            }
+                        },
+                        value: String {
+                            raw: "banana",
+                            start: Position {
+                                line: 57,
+                                column: 22,
+                                index: 1475
+                            },
+                            end: Position {
+                                line: 57,
+                                column: 30,
+                                index: 1483
+                            }
+                        },
+                        start: Position {
+                            line: 57,
+                            column: 5,
+                            index: 1458
+                        },
+                        end: Position {
+                            line: 57,
+                            column: 30,
+                            index: 1483
+                        }
+                    }
+                ],
+                start: Position {
+                    line: 2,
+                    column: 3,
+                    index: 4
+                },
+                end: Position {
+                    line: 58,
+                    column: 4,
+                    index: 1487
+                }
+            },
+            Object {
+                children: [
+                    Property {
+                        key: Identifier {
+                            raw: "_id",
+                            start: Position {
+                                line: 60,
+                                column: 5,
+                                index: 1497
+                            },
+                            end: Position {
+                                line: 60,
+                                column: 10,
+                                index: 1502
+                            }
+                        },
+                        value: String {
+                            raw: "574d7238bd4c01db9e4a4d5b",
+                            start: Position {
+                                line: 60,
+                                column: 12,
+                                index: 1504
+                            },
+                            end: Position {
+                                line: 60,
+                                column: 38,
+                                index: 1530
+                            }
+                        },
+                        start: Position {
+                            line: 60,
+                            column: 5,
+                            index: 1497
+                        },
+                        end: Position {
+                            line: 60,
+                            column: 38,
+                            index: 1530
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "index",
+                            start: Position {
+                                line: 61,
+                                column: 5,
+                                index: 1536
+                            },
+                            end: Position {
+                                line: 61,
+                                column: 12,
+                                index: 1543
+                            }
+                        },
+                        value: Number {
+                            raw: "1",
+                            start: Position {
+                                line: 61,
+                                column: 14,
+                                index: 1545
+                            },
+                            end: Position {
+                                line: 61,
+                                column: 15,
+                                index: 1546
+                            }
+                        },
+                        start: Position {
+                            line: 61,
+                            column: 5,
+                            index: 1536
+                        },
+                        end: Position {
+                            line: 61,
+                            column: 15,
+                            index: 1546
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "guid",
+                            start: Position {
+                                line: 62,
+                                column: 5,
+                                index: 1552
+                            },
+                            end: Position {
+                                line: 62,
+                                column: 11,
+                                index: 1558
+                            }
+                        },
+                        value: String {
+                            raw: "5fd3fc48-e39e-4ee4-bc3a-6eb12bed2653",
+                            start: Position {
+                                line: 62,
+                                column: 13,
+                                index: 1560
+                            },
+                            end: Position {
+                                line: 62,
+                                column: 51,
+                                index: 1598
+                            }
+                        },
+                        start: Position {
+                            line: 62,
+                            column: 5,
+                            index: 1552
+                        },
+                        end: Position {
+                            line: 62,
+                            column: 51,
+                            index: 1598
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "isActive",
+                            start: Position {
+                                line: 63,
+                                column: 5,
+                                index: 1604
+                            },
+                            end: Position {
+                                line: 63,
+                                column: 15,
+                                index: 1614
+                            }
+                        },
+                        value: Boolean {
+                            raw: "false",
+                            start: Position {
+                                line: 63,
+                                column: 17,
+                                index: 1616
+                            },
+                            end: Position {
+                                line: 63,
+                                column: 22,
+                                index: 1621
+                            }
+                        },
+                        start: Position {
+                            line: 63,
+                            column: 5,
+                            index: 1604
+                        },
+                        end: Position {
+                            line: 63,
+                            column: 22,
+                            index: 1621
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "balance",
+                            start: Position {
+                                line: 64,
+                                column: 5,
+                                index: 1627
+                            },
+                            end: Position {
+                                line: 64,
+                                column: 14,
+                                index: 1636
+                            }
+                        },
+                        value: String {
+                            raw: "$1,696.52",
+                            start: Position {
+                                line: 64,
+                                column: 16,
+                                index: 1638
+                            },
+                            end: Position {
+                                line: 64,
+                                column: 27,
+                                index: 1649
+                            }
+                        },
+                        start: Position {
+                            line: 64,
+                            column: 5,
+                            index: 1627
+                        },
+                        end: Position {
+                            line: 64,
+                            column: 27,
+                            index: 1649
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "picture",
+                            start: Position {
+                                line: 65,
+                                column: 5,
+                                index: 1655
+                            },
+                            end: Position {
+                                line: 65,
+                                column: 14,
+                                index: 1664
+                            }
+                        },
+                        value: String {
+                            raw: "http://placehold.it/32x32",
+                            start: Position {
+                                line: 65,
+                                column: 16,
+                                index: 1666
+                            },
+                            end: Position {
+                                line: 65,
+                                column: 43,
+                                index: 1693
+                            }
+                        },
+                        start: Position {
+                            line: 65,
+                            column: 5,
+                            index: 1655
+                        },
+                        end: Position {
+                            line: 65,
+                            column: 43,
+                            index: 1693
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "age",
+                            start: Position {
+                                line: 66,
+                                column: 5,
+                                index: 1699
+                            },
+                            end: Position {
+                                line: 66,
+                                column: 10,
+                                index: 1704
+                            }
+                        },
+                        value: Number {
+                            raw: "32",
+                            start: Position {
+                                line: 66,
+                                column: 12,
+                                index: 1706
+                            },
+                            end: Position {
+                                line: 66,
+                                column: 14,
+                                index: 1708
+                            }
+                        },
+                        start: Position {
+                            line: 66,
+                            column: 5,
+                            index: 1699
+                        },
+                        end: Position {
+                            line: 66,
+                            column: 14,
+                            index: 1708
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "eyeColor",
+                            start: Position {
+                                line: 67,
+                                column: 5,
+                                index: 1714
+                            },
+                            end: Position {
+                                line: 67,
+                                column: 15,
+                                index: 1724
+                            }
+                        },
+                        value: String {
+                            raw: "blue",
+                            start: Position {
+                                line: 67,
+                                column: 17,
+                                index: 1726
+                            },
+                            end: Position {
+                                line: 67,
+                                column: 23,
+                                index: 1732
+                            }
+                        },
+                        start: Position {
+                            line: 67,
+                            column: 5,
+                            index: 1714
+                        },
+                        end: Position {
+                            line: 67,
+                            column: 23,
+                            index: 1732
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "name",
+                            start: Position {
+                                line: 68,
+                                column: 5,
+                                index: 1738
+                            },
+                            end: Position {
+                                line: 68,
+                                column: 11,
+                                index: 1744
+                            }
+                        },
+                        value: Object {
+                            children: [
+                                Property {
+                                    key: Identifier {
+                                        raw: "first",
+                                        start: Position {
+                                            line: 69,
+                                            column: 7,
+                                            index: 1754
+                                        },
+                                        end: Position {
+                                            line: 69,
+                                            column: 14,
+                                            index: 1761
+                                        }
+                                    },
+                                    value: String {
+                                        raw: "Ada",
+                                        start: Position {
+                                            line: 69,
+                                            column: 16,
+                                            index: 1763
+                                        },
+                                        end: Position {
+                                            line: 69,
+                                            column: 21,
+                                            index: 1768
+                                        }
+                                    },
+                                    start: Position {
+                                        line: 69,
+                                        column: 7,
+                                        index: 1754
+                                    },
+                                    end: Position {
+                                        line: 69,
+                                        column: 21,
+                                        index: 1768
+                                    }
+                                },
+                                Property {
+                                    key: Identifier {
+                                        raw: "last",
+                                        start: Position {
+                                            line: 70,
+                                            column: 7,
+                                            index: 1776
+                                        },
+                                        end: Position {
+                                            line: 70,
+                                            column: 13,
+                                            index: 1782
+                                        }
+                                    },
+                                    value: String {
+                                        raw: "Stokes",
+                                        start: Position {
+                                            line: 70,
+                                            column: 15,
+                                            index: 1784
+                                        },
+                                        end: Position {
+                                            line: 70,
+                                            column: 23,
+                                            index: 1792
+                                        }
+                                    },
+                                    start: Position {
+                                        line: 70,
+                                        column: 7,
+                                        index: 1776
+                                    },
+                                    end: Position {
+                                        line: 70,
+                                        column: 23,
+                                        index: 1792
+                                    }
+                                }
+                            ],
+                            start: Position {
+                                line: 68,
+                                column: 13,
+                                index: 1746
+                            },
+                            end: Position {
+                                line: 71,
+                                column: 6,
+                                index: 1798
+                            }
+                        },
+                        start: Position {
+                            line: 68,
+                            column: 5,
+                            index: 1738
+                        },
+                        end: Position {
+                            line: 71,
+                            column: 6,
+                            index: 1798
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "company",
+                            start: Position {
+                                line: 72,
+                                column: 5,
+                                index: 1804
+                            },
+                            end: Position {
+                                line: 72,
+                                column: 14,
+                                index: 1813
+                            }
+                        },
+                        value: String {
+                            raw: "FARMAGE",
+                            start: Position {
+                                line: 72,
+                                column: 16,
+                                index: 1815
+                            },
+                            end: Position {
+                                line: 72,
+                                column: 25,
+                                index: 1824
+                            }
+                        },
+                        start: Position {
+                            line: 72,
+                            column: 5,
+                            index: 1804
+                        },
+                        end: Position {
+                            line: 72,
+                            column: 25,
+                            index: 1824
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "email",
+                            start: Position {
+                                line: 73,
+                                column: 5,
+                                index: 1830
+                            },
+                            end: Position {
+                                line: 73,
+                                column: 12,
+                                index: 1837
+                            }
+                        },
+                        value: String {
+                            raw: "ada.stokes@farmage.biz",
+                            start: Position {
+                                line: 73,
+                                column: 14,
+                                index: 1839
+                            },
+                            end: Position {
+                                line: 73,
+                                column: 38,
+                                index: 1863
+                            }
+                        },
+                        start: Position {
+                            line: 73,
+                            column: 5,
+                            index: 1830
+                        },
+                        end: Position {
+                            line: 73,
+                            column: 38,
+                            index: 1863
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "phone",
+                            start: Position {
+                                line: 74,
+                                column: 5,
+                                index: 1869
+                            },
+                            end: Position {
+                                line: 74,
+                                column: 12,
+                                index: 1876
+                            }
+                        },
+                        value: String {
+                            raw: "+1 (875) 486-3569",
+                            start: Position {
+                                line: 74,
+                                column: 14,
+                                index: 1878
+                            },
+                            end: Position {
+                                line: 74,
+                                column: 33,
+                                index: 1897
+                            }
+                        },
+                        start: Position {
+                            line: 74,
+                            column: 5,
+                            index: 1869
+                        },
+                        end: Position {
+                            line: 74,
+                            column: 33,
+                            index: 1897
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "address",
+                            start: Position {
+                                line: 75,
+                                column: 5,
+                                index: 1903
+                            },
+                            end: Position {
+                                line: 75,
+                                column: 14,
+                                index: 1912
+                            }
+                        },
+                        value: String {
+                            raw: "361 Howard Place, Wyano, Michigan, 346",
+                            start: Position {
+                                line: 75,
+                                column: 16,
+                                index: 1914
+                            },
+                            end: Position {
+                                line: 75,
+                                column: 56,
+                                index: 1954
+                            }
+                        },
+                        start: Position {
+                            line: 75,
+                            column: 5,
+                            index: 1903
+                        },
+                        end: Position {
+                            line: 75,
+                            column: 56,
+                            index: 1954
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "about",
+                            start: Position {
+                                line: 76,
+                                column: 5,
+                                index: 1960
+                            },
+                            end: Position {
+                                line: 76,
+                                column: 12,
+                                index: 1967
+                            }
+                        },
+                        value: String {
+                            raw: "Culpa esse laboris enim occaecat voluptate non reprehenderit officia amet eu ad laboris officia. Exercitation qui occaecat veniam ea tempor. Reprehenderit laborum magna occaecat sit tempor eiusmod est quis ea. Sunt minim labore et eu ex. Pariatur do proident nisi sunt commodo. Deserunt est ad pariatur laboris officia. Pariatur anim deserunt excepteur voluptate amet.",
+                            start: Position {
+                                line: 76,
+                                column: 14,
+                                index: 1969
+                            },
+                            end: Position {
+                                line: 76,
+                                column: 384,
+                                index: 2339
+                            }
+                        },
+                        start: Position {
+                            line: 76,
+                            column: 5,
+                            index: 1960
+                        },
+                        end: Position {
+                            line: 76,
+                            column: 384,
+                            index: 2339
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "registered",
+                            start: Position {
+                                line: 77,
+                                column: 5,
+                                index: 2345
+                            },
+                            end: Position {
+                                line: 77,
+                                column: 17,
+                                index: 2357
+                            }
+                        },
+                        value: String {
+                            raw: "Wednesday, April 16, 2014 7:23 PM",
+                            start: Position {
+                                line: 77,
+                                column: 19,
+                                index: 2359
+                            },
+                            end: Position {
+                                line: 77,
+                                column: 54,
+                                index: 2394
+                            }
+                        },
+                        start: Position {
+                            line: 77,
+                            column: 5,
+                            index: 2345
+                        },
+                        end: Position {
+                            line: 77,
+                            column: 54,
+                            index: 2394
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "latitude",
+                            start: Position {
+                                line: 78,
+                                column: 5,
+                                index: 2400
+                            },
+                            end: Position {
+                                line: 78,
+                                column: 15,
+                                index: 2410
+                            }
+                        },
+                        value: String {
+                            raw: "-45.133396",
+                            start: Position {
+                                line: 78,
+                                column: 17,
+                                index: 2412
+                            },
+                            end: Position {
+                                line: 78,
+                                column: 29,
+                                index: 2424
+                            }
+                        },
+                        start: Position {
+                            line: 78,
+                            column: 5,
+                            index: 2400
+                        },
+                        end: Position {
+                            line: 78,
+                            column: 29,
+                            index: 2424
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "longitude",
+                            start: Position {
+                                line: 79,
+                                column: 5,
+                                index: 2430
+                            },
+                            end: Position {
+                                line: 79,
+                                column: 16,
+                                index: 2441
+                            }
+                        },
+                        value: String {
+                            raw: "43.593917",
+                            start: Position {
+                                line: 79,
+                                column: 18,
+                                index: 2443
+                            },
+                            end: Position {
+                                line: 79,
+                                column: 29,
+                                index: 2454
+                            }
+                        },
+                        start: Position {
+                            line: 79,
+                            column: 5,
+                            index: 2430
+                        },
+                        end: Position {
+                            line: 79,
+                            column: 29,
+                            index: 2454
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "tags",
+                            start: Position {
+                                line: 80,
+                                column: 5,
+                                index: 2460
+                            },
+                            end: Position {
+                                line: 80,
+                                column: 11,
+                                index: 2466
+                            }
+                        },
+                        value: Array {
+                            children: [
+                                String {
+                                    raw: "qui",
+                                    start: Position {
+                                        line: 81,
+                                        column: 7,
+                                        index: 2476
+                                    },
+                                    end: Position {
+                                        line: 81,
+                                        column: 12,
+                                        index: 2481
+                                    }
+                                },
+                                String {
+                                    raw: "eiusmod",
+                                    start: Position {
+                                        line: 82,
+                                        column: 7,
+                                        index: 2489
+                                    },
+                                    end: Position {
+                                        line: 82,
+                                        column: 16,
+                                        index: 2498
+                                    }
+                                },
+                                String {
+                                    raw: "nisi",
+                                    start: Position {
+                                        line: 83,
+                                        column: 7,
+                                        index: 2506
+                                    },
+                                    end: Position {
+                                        line: 83,
+                                        column: 13,
+                                        index: 2512
+                                    }
+                                },
+                                String {
+                                    raw: "officia",
+                                    start: Position {
+                                        line: 84,
+                                        column: 7,
+                                        index: 2520
+                                    },
+                                    end: Position {
+                                        line: 84,
+                                        column: 16,
+                                        index: 2529
+                                    }
+                                },
+                                String {
+                                    raw: "in",
+                                    start: Position {
+                                        line: 85,
+                                        column: 7,
+                                        index: 2537
+                                    },
+                                    end: Position {
+                                        line: 85,
+                                        column: 11,
+                                        index: 2541
+                                    }
+                                }
+                            ],
+                            start: Position {
+                                line: 86,
+                                column: 5,
+                                index: 2546
+                            },
+                            end: Position {
+                                line: 86,
+                                column: 6,
+                                index: 2547
+                            }
+                        },
+                        start: Position {
+                            line: 80,
+                            column: 5,
+                            index: 2460
+                        },
+                        end: Position {
+                            line: 86,
+                            column: 6,
+                            index: 2547
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "range",
+                            start: Position {
+                                line: 87,
+                                column: 5,
+                                index: 2553
+                            },
+                            end: Position {
+                                line: 87,
+                                column: 12,
+                                index: 2560
+                            }
+                        },
+                        value: Array {
+                            children: [
+                                Number {
+                                    raw: "0",
+                                    start: Position {
+                                        line: 88,
+                                        column: 7,
+                                        index: 2570
+                                    },
+                                    end: Position {
+                                        line: 88,
+                                        column: 8,
+                                        index: 2571
+                                    }
+                                },
+                                Number {
+                                    raw: "1",
+                                    start: Position {
+                                        line: 89,
+                                        column: 7,
+                                        index: 2579
+                                    },
+                                    end: Position {
+                                        line: 89,
+                                        column: 8,
+                                        index: 2580
+                                    }
+                                },
+                                Number {
+                                    raw: "2",
+                                    start: Position {
+                                        line: 90,
+                                        column: 7,
+                                        index: 2588
+                                    },
+                                    end: Position {
+                                        line: 90,
+                                        column: 8,
+                                        index: 2589
+                                    }
+                                },
+                                Number {
+                                    raw: "3",
+                                    start: Position {
+                                        line: 91,
+                                        column: 7,
+                                        index: 2597
+                                    },
+                                    end: Position {
+                                        line: 91,
+                                        column: 8,
+                                        index: 2598
+                                    }
+                                },
+                                Number {
+                                    raw: "4",
+                                    start: Position {
+                                        line: 92,
+                                        column: 7,
+                                        index: 2606
+                                    },
+                                    end: Position {
+                                        line: 92,
+                                        column: 8,
+                                        index: 2607
+                                    }
+                                },
+                                Number {
+                                    raw: "5",
+                                    start: Position {
+                                        line: 93,
+                                        column: 7,
+                                        index: 2615
+                                    },
+                                    end: Position {
+                                        line: 93,
+                                        column: 8,
+                                        index: 2616
+                                    }
+                                },
+                                Number {
+                                    raw: "6",
+                                    start: Position {
+                                        line: 94,
+                                        column: 7,
+                                        index: 2624
+                                    },
+                                    end: Position {
+                                        line: 94,
+                                        column: 8,
+                                        index: 2625
+                                    }
+                                },
+                                Number {
+                                    raw: "7",
+                                    start: Position {
+                                        line: 95,
+                                        column: 7,
+                                        index: 2633
+                                    },
+                                    end: Position {
+                                        line: 95,
+                                        column: 8,
+                                        index: 2634
+                                    }
+                                },
+                                Number {
+                                    raw: "8",
+                                    start: Position {
+                                        line: 96,
+                                        column: 7,
+                                        index: 2642
+                                    },
+                                    end: Position {
+                                        line: 96,
+                                        column: 8,
+                                        index: 2643
+                                    }
+                                },
+                                Number {
+                                    raw: "9",
+                                    start: Position {
+                                        line: 97,
+                                        column: 7,
+                                        index: 2651
+                                    },
+                                    end: Position {
+                                        line: 97,
+                                        column: 8,
+                                        index: 2652
+                                    }
+                                }
+                            ],
+                            start: Position {
+                                line: 98,
+                                column: 5,
+                                index: 2657
+                            },
+                            end: Position {
+                                line: 98,
+                                column: 6,
+                                index: 2658
+                            }
+                        },
+                        start: Position {
+                            line: 87,
+                            column: 5,
+                            index: 2553
+                        },
+                        end: Position {
+                            line: 98,
+                            column: 6,
+                            index: 2658
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "friends",
+                            start: Position {
+                                line: 99,
+                                column: 5,
+                                index: 2664
+                            },
+                            end: Position {
+                                line: 99,
+                                column: 14,
+                                index: 2673
+                            }
+                        },
+                        value: Array {
+                            children: [
+                                Object {
+                                    children: [
+                                        Property {
+                                            key: Identifier {
+                                                raw: "id",
+                                                start: Position {
+                                                    line: 101,
+                                                    column: 9,
+                                                    index: 2693
+                                                },
+                                                end: Position {
+                                                    line: 101,
+                                                    column: 13,
+                                                    index: 2697
+                                                }
+                                            },
+                                            value: Number {
+                                                raw: "0",
+                                                start: Position {
+                                                    line: 101,
+                                                    column: 15,
+                                                    index: 2699
+                                                },
+                                                end: Position {
+                                                    line: 101,
+                                                    column: 16,
+                                                    index: 2700
+                                                }
+                                            },
+                                            start: Position {
+                                                line: 101,
+                                                column: 9,
+                                                index: 2693
+                                            },
+                                            end: Position {
+                                                line: 101,
+                                                column: 16,
+                                                index: 2700
+                                            }
+                                        },
+                                        Property {
+                                            key: Identifier {
+                                                raw: "name",
+                                                start: Position {
+                                                    line: 102,
+                                                    column: 9,
+                                                    index: 2710
+                                                },
+                                                end: Position {
+                                                    line: 102,
+                                                    column: 15,
+                                                    index: 2716
+                                                }
+                                            },
+                                            value: String {
+                                                raw: "Campos Pruitt",
+                                                start: Position {
+                                                    line: 102,
+                                                    column: 17,
+                                                    index: 2718
+                                                },
+                                                end: Position {
+                                                    line: 102,
+                                                    column: 32,
+                                                    index: 2733
+                                                }
+                                            },
+                                            start: Position {
+                                                line: 102,
+                                                column: 9,
+                                                index: 2710
+                                            },
+                                            end: Position {
+                                                line: 102,
+                                                column: 32,
+                                                index: 2733
+                                            }
+                                        }
+                                    ],
+                                    start: Position {
+                                        line: 100,
+                                        column: 7,
+                                        index: 2683
+                                    },
+                                    end: Position {
+                                        line: 103,
+                                        column: 8,
+                                        index: 2741
+                                    }
+                                },
+                                Object {
+                                    children: [
+                                        Property {
+                                            key: Identifier {
+                                                raw: "id",
+                                                start: Position {
+                                                    line: 105,
+                                                    column: 9,
+                                                    index: 2759
+                                                },
+                                                end: Position {
+                                                    line: 105,
+                                                    column: 13,
+                                                    index: 2763
+                                                }
+                                            },
+                                            value: Number {
+                                                raw: "1",
+                                                start: Position {
+                                                    line: 105,
+                                                    column: 15,
+                                                    index: 2765
+                                                },
+                                                end: Position {
+                                                    line: 105,
+                                                    column: 16,
+                                                    index: 2766
+                                                }
+                                            },
+                                            start: Position {
+                                                line: 105,
+                                                column: 9,
+                                                index: 2759
+                                            },
+                                            end: Position {
+                                                line: 105,
+                                                column: 16,
+                                                index: 2766
+                                            }
+                                        },
+                                        Property {
+                                            key: Identifier {
+                                                raw: "name",
+                                                start: Position {
+                                                    line: 106,
+                                                    column: 9,
+                                                    index: 2776
+                                                },
+                                                end: Position {
+                                                    line: 106,
+                                                    column: 15,
+                                                    index: 2782
+                                                }
+                                            },
+                                            value: String {
+                                                raw: "Barnett Sykes",
+                                                start: Position {
+                                                    line: 106,
+                                                    column: 17,
+                                                    index: 2784
+                                                },
+                                                end: Position {
+                                                    line: 106,
+                                                    column: 32,
+                                                    index: 2799
+                                                }
+                                            },
+                                            start: Position {
+                                                line: 106,
+                                                column: 9,
+                                                index: 2776
+                                            },
+                                            end: Position {
+                                                line: 106,
+                                                column: 32,
+                                                index: 2799
+                                            }
+                                        }
+                                    ],
+                                    start: Position {
+                                        line: 104,
+                                        column: 7,
+                                        index: 2749
+                                    },
+                                    end: Position {
+                                        line: 107,
+                                        column: 8,
+                                        index: 2807
+                                    }
+                                },
+                                Object {
+                                    children: [
+                                        Property {
+                                            key: Identifier {
+                                                raw: "id",
+                                                start: Position {
+                                                    line: 109,
+                                                    column: 9,
+                                                    index: 2825
+                                                },
+                                                end: Position {
+                                                    line: 109,
+                                                    column: 13,
+                                                    index: 2829
+                                                }
+                                            },
+                                            value: Number {
+                                                raw: "2",
+                                                start: Position {
+                                                    line: 109,
+                                                    column: 15,
+                                                    index: 2831
+                                                },
+                                                end: Position {
+                                                    line: 109,
+                                                    column: 16,
+                                                    index: 2832
+                                                }
+                                            },
+                                            start: Position {
+                                                line: 109,
+                                                column: 9,
+                                                index: 2825
+                                            },
+                                            end: Position {
+                                                line: 109,
+                                                column: 16,
+                                                index: 2832
+                                            }
+                                        },
+                                        Property {
+                                            key: Identifier {
+                                                raw: "name",
+                                                start: Position {
+                                                    line: 110,
+                                                    column: 9,
+                                                    index: 2842
+                                                },
+                                                end: Position {
+                                                    line: 110,
+                                                    column: 15,
+                                                    index: 2848
+                                                }
+                                            },
+                                            value: String {
+                                                raw: "Trudy Collier",
+                                                start: Position {
+                                                    line: 110,
+                                                    column: 17,
+                                                    index: 2850
+                                                },
+                                                end: Position {
+                                                    line: 110,
+                                                    column: 32,
+                                                    index: 2865
+                                                }
+                                            },
+                                            start: Position {
+                                                line: 110,
+                                                column: 9,
+                                                index: 2842
+                                            },
+                                            end: Position {
+                                                line: 110,
+                                                column: 32,
+                                                index: 2865
+                                            }
+                                        }
+                                    ],
+                                    start: Position {
+                                        line: 108,
+                                        column: 7,
+                                        index: 2815
+                                    },
+                                    end: Position {
+                                        line: 111,
+                                        column: 8,
+                                        index: 2873
+                                    }
+                                }
+                            ],
+                            start: Position {
+                                line: 112,
+                                column: 5,
+                                index: 2878
+                            },
+                            end: Position {
+                                line: 112,
+                                column: 6,
+                                index: 2879
+                            }
+                        },
+                        start: Position {
+                            line: 99,
+                            column: 5,
+                            index: 2664
+                        },
+                        end: Position {
+                            line: 112,
+                            column: 6,
+                            index: 2879
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "greeting",
+                            start: Position {
+                                line: 113,
+                                column: 5,
+                                index: 2885
+                            },
+                            end: Position {
+                                line: 113,
+                                column: 15,
+                                index: 2895
+                            }
+                        },
+                        value: String {
+                            raw: "Hello, Ada! You have 8 unread messages.",
+                            start: Position {
+                                line: 113,
+                                column: 17,
+                                index: 2897
+                            },
+                            end: Position {
+                                line: 113,
+                                column: 58,
+                                index: 2938
+                            }
+                        },
+                        start: Position {
+                            line: 113,
+                            column: 5,
+                            index: 2885
+                        },
+                        end: Position {
+                            line: 113,
+                            column: 58,
+                            index: 2938
+                        }
+                    },
+                    Property {
+                        key: Identifier {
+                            raw: "favoriteFruit",
+                            start: Position {
+                                line: 114,
+                                column: 5,
+                                index: 2944
+                            },
+                            end: Position {
+                                line: 114,
+                                column: 20,
+                                index: 2959
+                            }
+                        },
+                        value: String {
+                            raw: "banana",
+                            start: Position {
+                                line: 114,
+                                column: 22,
+                                index: 2961
+                            },
+                            end: Position {
+                                line: 114,
+                                column: 30,
+                                index: 2969
+                            }
+                        },
+                        start: Position {
+                            line: 114,
+                            column: 5,
+                            index: 2944
+                        },
+                        end: Position {
+                            line: 114,
+                            column: 30,
+                            index: 2969
+                        }
+                    }
+                ],
+                start: Position {
+                    line: 59,
+                    column: 3,
+                    index: 1491
+                },
+                end: Position {
+                    line: 115,
+                    column: 4,
+                    index: 2973
+                }
+            }
+        ],
+        start: Position {
+            line: 116,
+            column: 1,
+            index: 2974
+        },
+        end: Position {
+            line: 116,
+            column: 2,
+            index: 2975
+        }
+    }
+)

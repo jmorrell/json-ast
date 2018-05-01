@@ -1,0 +1,118 @@
+JSON:
+[[[[[[[[]]]]]]]]
+
+
+Value:
+Some(
+    Array {
+        children: [
+            Array {
+                children: [
+                    Array {
+                        children: [
+                            Array {
+                                children: [
+                                    Array {
+                                        children: [
+                                            Array {
+                                                children: [
+                                                    Array {
+                                                        children: [
+                                                            Array {
+                                                                children: [],
+                                                                start: Position {
+                                                                    line: 1,
+                                                                    column: 8,
+                                                                    index: 7
+                                                                },
+                                                                end: Position {
+                                                                    line: 1,
+                                                                    column: 10,
+                                                                    index: 9
+                                                                }
+                                                            }
+                                                        ],
+                                                        start: Position {
+                                                            line: 1,
+                                                            column: 10,
+                                                            index: 9
+                                                        },
+                                                        end: Position {
+                                                            line: 1,
+                                                            column: 11,
+                                                            index: 10
+                                                        }
+                                                    }
+                                                ],
+                                                start: Position {
+                                                    line: 1,
+                                                    column: 11,
+                                                    index: 10
+                                                },
+                                                end: Position {
+                                                    line: 1,
+                                                    column: 12,
+                                                    index: 11
+                                                }
+                                            }
+                                        ],
+                                        start: Position {
+                                            line: 1,
+                                            column: 12,
+                                            index: 11
+                                        },
+                                        end: Position {
+                                            line: 1,
+                                            column: 13,
+                                            index: 12
+                                        }
+                                    }
+                                ],
+                                start: Position {
+                                    line: 1,
+                                    column: 13,
+                                    index: 12
+                                },
+                                end: Position {
+                                    line: 1,
+                                    column: 14,
+                                    index: 13
+                                }
+                            }
+                        ],
+                        start: Position {
+                            line: 1,
+                            column: 14,
+                            index: 13
+                        },
+                        end: Position {
+                            line: 1,
+                            column: 15,
+                            index: 14
+                        }
+                    }
+                ],
+                start: Position {
+                    line: 1,
+                    column: 15,
+                    index: 14
+                },
+                end: Position {
+                    line: 1,
+                    column: 16,
+                    index: 15
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 16,
+            index: 15
+        },
+        end: Position {
+            line: 1,
+            column: 17,
+            index: 16
+        }
+    }
+)

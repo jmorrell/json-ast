@@ -1,0 +1,33 @@
+JSON:
+["€𝄞"]
+
+Value:
+Some(
+    Array {
+        children: [
+            String {
+                raw: "€𝄞",
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 11,
+                    index: 10
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 11,
+            index: 10
+        },
+        end: Position {
+            line: 1,
+            column: 12,
+            index: 11
+        }
+    }
+)

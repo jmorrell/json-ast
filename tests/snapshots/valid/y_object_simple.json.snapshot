@@ -1,0 +1,58 @@
+JSON:
+{"a":[]}
+
+Value:
+Some(
+    Object {
+        children: [
+            Property {
+                key: Identifier {
+                    raw: "a",
+                    start: Position {
+                        line: 1,
+                        column: 2,
+                        index: 1
+                    },
+                    end: Position {
+                        line: 1,
+                        column: 5,
+                        index: 4
+                    }
+                },
+                value: Array {
+                    children: [],
+                    start: Position {
+                        line: 1,
+                        column: 6,
+                        index: 5
+                    },
+                    end: Position {
+                        line: 1,
+                        column: 8,
+                        index: 7
+                    }
+                },
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 8,
+                    index: 7
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 1,
+            index: 0
+        },
+        end: Position {
+            line: 1,
+            column: 9,
+            index: 8
+        }
+    }
+)

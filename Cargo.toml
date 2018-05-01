@@ -4,4 +4,3 @@ version = "0.1.0"
 authors = ["Jeremy Morrell <morrell.jeremy@gmail.com>"]
 
 [dev-dependencies]
-snaptest = "0.2.0"

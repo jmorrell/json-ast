@@ -1,0 +1,33 @@
+JSON:
+["asd "]
+
+Value:
+Some(
+    Array {
+        children: [
+            String {
+                raw: "asd ",
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 8,
+                    index: 7
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 8,
+            index: 7
+        },
+        end: Position {
+            line: 1,
+            column: 9,
+            index: 8
+        }
+    }
+)

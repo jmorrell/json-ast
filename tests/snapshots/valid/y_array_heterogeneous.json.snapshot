@@ -1,0 +1,72 @@
+JSON:
+[null, 1, "1", {}]
+
+Value:
+Some(
+    Array {
+        children: [
+            Null {
+                raw: "null",
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 6,
+                    index: 5
+                }
+            },
+            Number {
+                raw: "1",
+                start: Position {
+                    line: 1,
+                    column: 8,
+                    index: 7
+                },
+                end: Position {
+                    line: 1,
+                    column: 9,
+                    index: 8
+                }
+            },
+            String {
+                raw: "1",
+                start: Position {
+                    line: 1,
+                    column: 11,
+                    index: 10
+                },
+                end: Position {
+                    line: 1,
+                    column: 14,
+                    index: 13
+                }
+            },
+            Object {
+                children: [],
+                start: Position {
+                    line: 1,
+                    column: 16,
+                    index: 15
+                },
+                end: Position {
+                    line: 1,
+                    column: 18,
+                    index: 17
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 18,
+            index: 17
+        },
+        end: Position {
+            line: 1,
+            column: 19,
+            index: 18
+        }
+    }
+)

@@ -1,0 +1,33 @@
+JSON:
+["a/*b*/c/*d//e"]
+
+Value:
+Some(
+    Array {
+        children: [
+            String {
+                raw: "a/*b*/c/*d//e",
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 17,
+                    index: 16
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 17,
+            index: 16
+        },
+        end: Position {
+            line: 1,
+            column: 18,
+            index: 17
+        }
+    }
+)

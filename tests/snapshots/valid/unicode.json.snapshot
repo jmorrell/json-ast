@@ -1,0 +1,156 @@
+JSON:
+[
+  "\u2665",
+  { "\u00A9": "\uD834\uDF06\b\n\t" },
+  "\u007f",
+  { "\uDBFF\uDFFF": "\uD834\uDD1E" }
+]
+
+
+Value:
+Some(
+    Array {
+        children: [
+            String {
+                raw: "\\u2665",
+                start: Position {
+                    line: 2,
+                    column: 3,
+                    index: 4
+                },
+                end: Position {
+                    line: 2,
+                    column: 11,
+                    index: 12
+                }
+            },
+            Object {
+                children: [
+                    Property {
+                        key: Identifier {
+                            raw: "\\u00A9",
+                            start: Position {
+                                line: 3,
+                                column: 5,
+                                index: 18
+                            },
+                            end: Position {
+                                line: 3,
+                                column: 13,
+                                index: 26
+                            }
+                        },
+                        value: String {
+                            raw: "\\uD834\\uDF06\\b\\n\\t",
+                            start: Position {
+                                line: 3,
+                                column: 15,
+                                index: 28
+                            },
+                            end: Position {
+                                line: 3,
+                                column: 35,
+                                index: 48
+                            }
+                        },
+                        start: Position {
+                            line: 3,
+                            column: 5,
+                            index: 18
+                        },
+                        end: Position {
+                            line: 3,
+                            column: 35,
+                            index: 48
+                        }
+                    }
+                ],
+                start: Position {
+                    line: 3,
+                    column: 3,
+                    index: 16
+                },
+                end: Position {
+                    line: 3,
+                    column: 37,
+                    index: 50
+                }
+            },
+            String {
+                raw: "\\u007f",
+                start: Position {
+                    line: 4,
+                    column: 3,
+                    index: 54
+                },
+                end: Position {
+                    line: 4,
+                    column: 11,
+                    index: 62
+                }
+            },
+            Object {
+                children: [
+                    Property {
+                        key: Identifier {
+                            raw: "\\uDBFF\\uDFFF",
+                            start: Position {
+                                line: 5,
+                                column: 5,
+                                index: 68
+                            },
+                            end: Position {
+                                line: 5,
+                                column: 19,
+                                index: 82
+                            }
+                        },
+                        value: String {
+                            raw: "\\uD834\\uDD1E",
+                            start: Position {
+                                line: 5,
+                                column: 21,
+                                index: 84
+                            },
+                            end: Position {
+                                line: 5,
+                                column: 35,
+                                index: 98
+                            }
+                        },
+                        start: Position {
+                            line: 5,
+                            column: 5,
+                            index: 68
+                        },
+                        end: Position {
+                            line: 5,
+                            column: 35,
+                            index: 98
+                        }
+                    }
+                ],
+                start: Position {
+                    line: 5,
+                    column: 3,
+                    index: 66
+                },
+                end: Position {
+                    line: 5,
+                    column: 37,
+                    index: 100
+                }
+            }
+        ],
+        start: Position {
+            line: 6,
+            column: 1,
+            index: 101
+        },
+        end: Position {
+            line: 6,
+            column: 2,
+            index: 102
+        }
+    }
+)

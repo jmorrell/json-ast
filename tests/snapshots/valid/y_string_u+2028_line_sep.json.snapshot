@@ -1,0 +1,33 @@
+JSON:
+[" "]
+
+Value:
+Some(
+    Array {
+        children: [
+            String {
+                raw: "\u{2028}",
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 7,
+                    index: 6
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 7,
+            index: 6
+        },
+        end: Position {
+            line: 1,
+            column: 8,
+            index: 7
+        }
+    }
+)

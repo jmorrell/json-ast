@@ -1,0 +1,33 @@
+JSON:
+["new\u000Aline"]
+
+Value:
+Some(
+    Array {
+        children: [
+            String {
+                raw: "new\\u000Aline",
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 17,
+                    index: 16
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 17,
+            index: 16
+        },
+        end: Position {
+            line: 1,
+            column: 18,
+            index: 17
+        }
+    }
+)

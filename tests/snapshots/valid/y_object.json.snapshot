@@ -1,0 +1,96 @@
+JSON:
+{"asd":"sdf", "dfg":"fgh"}
+
+Value:
+Some(
+    Object {
+        children: [
+            Property {
+                key: Identifier {
+                    raw: "asd",
+                    start: Position {
+                        line: 1,
+                        column: 2,
+                        index: 1
+                    },
+                    end: Position {
+                        line: 1,
+                        column: 7,
+                        index: 6
+                    }
+                },
+                value: String {
+                    raw: "sdf",
+                    start: Position {
+                        line: 1,
+                        column: 8,
+                        index: 7
+                    },
+                    end: Position {
+                        line: 1,
+                        column: 13,
+                        index: 12
+                    }
+                },
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 13,
+                    index: 12
+                }
+            },
+            Property {
+                key: Identifier {
+                    raw: "dfg",
+                    start: Position {
+                        line: 1,
+                        column: 15,
+                        index: 14
+                    },
+                    end: Position {
+                        line: 1,
+                        column: 20,
+                        index: 19
+                    }
+                },
+                value: String {
+                    raw: "fgh",
+                    start: Position {
+                        line: 1,
+                        column: 21,
+                        index: 20
+                    },
+                    end: Position {
+                        line: 1,
+                        column: 26,
+                        index: 25
+                    }
+                },
+                start: Position {
+                    line: 1,
+                    column: 15,
+                    index: 14
+                },
+                end: Position {
+                    line: 1,
+                    column: 26,
+                    index: 25
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 1,
+            index: 0
+        },
+        end: Position {
+            line: 1,
+            column: 27,
+            index: 26
+        }
+    }
+)

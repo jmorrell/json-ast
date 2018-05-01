@@ -1,0 +1,33 @@
+JSON:
+[2] 
+
+Value:
+Some(
+    Array {
+        children: [
+            Number {
+                raw: "2",
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 3,
+                    index: 2
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 3,
+            index: 2
+        },
+        end: Position {
+            line: 1,
+            column: 4,
+            index: 3
+        }
+    }
+)

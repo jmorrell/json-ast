@@ -1,0 +1,33 @@
+JSON:
+["\uD83F\uDFFE"]
+
+Value:
+Some(
+    Array {
+        children: [
+            String {
+                raw: "\\uD83F\\uDFFE",
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 16,
+                    index: 15
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 16,
+            index: 15
+        },
+        end: Position {
+            line: 1,
+            column: 17,
+            index: 16
+        }
+    }
+)

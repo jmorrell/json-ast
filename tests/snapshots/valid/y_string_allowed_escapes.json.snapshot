@@ -1,0 +1,33 @@
+JSON:
+["\"\\\/\b\f\n\r\t"]
+
+Value:
+Some(
+    Array {
+        children: [
+            String {
+                raw: "\\\"\\\\\\/\\b\\f\\n\\r\\t",
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 20,
+                    index: 19
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 20,
+            index: 19
+        },
+        end: Position {
+            line: 1,
+            column: 21,
+            index: 20
+        }
+    }
+)

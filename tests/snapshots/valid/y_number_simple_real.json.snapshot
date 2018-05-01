@@ -1,0 +1,33 @@
+JSON:
+[123.456789]
+
+Value:
+Some(
+    Array {
+        children: [
+            Number {
+                raw: "123.456789",
+                start: Position {
+                    line: 1,
+                    column: 2,
+                    index: 1
+                },
+                end: Position {
+                    line: 1,
+                    column: 12,
+                    index: 11
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 12,
+            index: 11
+        },
+        end: Position {
+            line: 1,
+            column: 13,
+            index: 12
+        }
+    }
+)

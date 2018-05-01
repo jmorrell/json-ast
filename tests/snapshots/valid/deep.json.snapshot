@@ -1,0 +1,497 @@
+JSON:
+{
+  "a": {
+    "b": {
+      "c": {
+        "d": {
+          "e": {
+            "f": {
+              "g": [
+                "h", [
+                  "i", [
+                    "j", [
+                      "k", [
+                        "l", [
+                          "m", [
+                            "n"
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+Value:
+Some(
+    Object {
+        children: [
+            Property {
+                key: Identifier {
+                    raw: "a",
+                    start: Position {
+                        line: 2,
+                        column: 3,
+                        index: 4
+                    },
+                    end: Position {
+                        line: 2,
+                        column: 6,
+                        index: 7
+                    }
+                },
+                value: Object {
+                    children: [
+                        Property {
+                            key: Identifier {
+                                raw: "b",
+                                start: Position {
+                                    line: 3,
+                                    column: 5,
+                                    index: 15
+                                },
+                                end: Position {
+                                    line: 3,
+                                    column: 8,
+                                    index: 18
+                                }
+                            },
+                            value: Object {
+                                children: [
+                                    Property {
+                                        key: Identifier {
+                                            raw: "c",
+                                            start: Position {
+                                                line: 4,
+                                                column: 7,
+                                                index: 28
+                                            },
+                                            end: Position {
+                                                line: 4,
+                                                column: 10,
+                                                index: 31
+                                            }
+                                        },
+                                        value: Object {
+                                            children: [
+                                                Property {
+                                                    key: Identifier {
+                                                        raw: "d",
+                                                        start: Position {
+                                                            line: 5,
+                                                            column: 9,
+                                                            index: 43
+                                                        },
+                                                        end: Position {
+                                                            line: 5,
+                                                            column: 12,
+                                                            index: 46
+                                                        }
+                                                    },
+                                                    value: Object {
+                                                        children: [
+                                                            Property {
+                                                                key: Identifier {
+                                                                    raw: "e",
+                                                                    start: Position {
+                                                                        line: 6,
+                                                                        column: 11,
+                                                                        index: 60
+                                                                    },
+                                                                    end: Position {
+                                                                        line: 6,
+                                                                        column: 14,
+                                                                        index: 63
+                                                                    }
+                                                                },
+                                                                value: Object {
+                                                                    children: [
+                                                                        Property {
+                                                                            key: Identifier {
+                                                                                raw: "f",
+                                                                                start: Position {
+                                                                                    line: 7,
+                                                                                    column: 13,
+                                                                                    index: 79
+                                                                                },
+                                                                                end: Position {
+                                                                                    line: 7,
+                                                                                    column: 16,
+                                                                                    index: 82
+                                                                                }
+                                                                            },
+                                                                            value: Object {
+                                                                                children: [
+                                                                                    Property {
+                                                                                        key: Identifier {
+                                                                                            raw: "g",
+                                                                                            start: Position {
+                                                                                                line: 8,
+                                                                                                column: 15,
+                                                                                                index: 100
+                                                                                            },
+                                                                                            end: Position {
+                                                                                                line: 8,
+                                                                                                column: 18,
+                                                                                                index: 103
+                                                                                            }
+                                                                                        },
+                                                                                        value: Array {
+                                                                                            children: [
+                                                                                                String {
+                                                                                                    raw: "h",
+                                                                                                    start: Position {
+                                                                                                        line: 9,
+                                                                                                        column: 17,
+                                                                                                        index: 123
+                                                                                                    },
+                                                                                                    end: Position {
+                                                                                                        line: 9,
+                                                                                                        column: 20,
+                                                                                                        index: 126
+                                                                                                    }
+                                                                                                },
+                                                                                                Array {
+                                                                                                    children: [
+                                                                                                        String {
+                                                                                                            raw: "i",
+                                                                                                            start: Position {
+                                                                                                                line: 10,
+                                                                                                                column: 19,
+                                                                                                                index: 148
+                                                                                                            },
+                                                                                                            end: Position {
+                                                                                                                line: 10,
+                                                                                                                column: 22,
+                                                                                                                index: 151
+                                                                                                            }
+                                                                                                        },
+                                                                                                        Array {
+                                                                                                            children: [
+                                                                                                                String {
+                                                                                                                    raw: "j",
+                                                                                                                    start: Position {
+                                                                                                                        line: 11,
+                                                                                                                        column: 21,
+                                                                                                                        index: 175
+                                                                                                                    },
+                                                                                                                    end: Position {
+                                                                                                                        line: 11,
+                                                                                                                        column: 24,
+                                                                                                                        index: 178
+                                                                                                                    }
+                                                                                                                },
+                                                                                                                Array {
+                                                                                                                    children: [
+                                                                                                                        String {
+                                                                                                                            raw: "k",
+                                                                                                                            start: Position {
+                                                                                                                                line: 12,
+                                                                                                                                column: 23,
+                                                                                                                                index: 204
+                                                                                                                            },
+                                                                                                                            end: Position {
+                                                                                                                                line: 12,
+                                                                                                                                column: 26,
+                                                                                                                                index: 207
+                                                                                                                            }
+                                                                                                                        },
+                                                                                                                        Array {
+                                                                                                                            children: [
+                                                                                                                                String {
+                                                                                                                                    raw: "l",
+                                                                                                                                    start: Position {
+                                                                                                                                        line: 13,
+                                                                                                                                        column: 25,
+                                                                                                                                        index: 235
+                                                                                                                                    },
+                                                                                                                                    end: Position {
+                                                                                                                                        line: 13,
+                                                                                                                                        column: 28,
+                                                                                                                                        index: 238
+                                                                                                                                    }
+                                                                                                                                },
+                                                                                                                                Array {
+                                                                                                                                    children: [
+                                                                                                                                        String {
+                                                                                                                                            raw: "m",
+                                                                                                                                            start: Position {
+                                                                                                                                                line: 14,
+                                                                                                                                                column: 27,
+                                                                                                                                                index: 268
+                                                                                                                                            },
+                                                                                                                                            end: Position {
+                                                                                                                                                line: 14,
+                                                                                                                                                column: 30,
+                                                                                                                                                index: 271
+                                                                                                                                            }
+                                                                                                                                        },
+                                                                                                                                        Array {
+                                                                                                                                            children: [
+                                                                                                                                                String {
+                                                                                                                                                    raw: "n",
+                                                                                                                                                    start: Position {
+                                                                                                                                                        line: 15,
+                                                                                                                                                        column: 29,
+                                                                                                                                                        index: 303
+                                                                                                                                                    },
+                                                                                                                                                    end: Position {
+                                                                                                                                                        line: 15,
+                                                                                                                                                        column: 32,
+                                                                                                                                                        index: 306
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                            ],
+                                                                                                                                            start: Position {
+                                                                                                                                                line: 16,
+                                                                                                                                                column: 27,
+                                                                                                                                                index: 333
+                                                                                                                                            },
+                                                                                                                                            end: Position {
+                                                                                                                                                line: 16,
+                                                                                                                                                column: 28,
+                                                                                                                                                index: 334
+                                                                                                                                            }
+                                                                                                                                        }
+                                                                                                                                    ],
+                                                                                                                                    start: Position {
+                                                                                                                                        line: 17,
+                                                                                                                                        column: 25,
+                                                                                                                                        index: 359
+                                                                                                                                    },
+                                                                                                                                    end: Position {
+                                                                                                                                        line: 17,
+                                                                                                                                        column: 26,
+                                                                                                                                        index: 360
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                            ],
+                                                                                                                            start: Position {
+                                                                                                                                line: 18,
+                                                                                                                                column: 23,
+                                                                                                                                index: 383
+                                                                                                                            },
+                                                                                                                            end: Position {
+                                                                                                                                line: 18,
+                                                                                                                                column: 24,
+                                                                                                                                index: 384
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    ],
+                                                                                                                    start: Position {
+                                                                                                                        line: 19,
+                                                                                                                        column: 21,
+                                                                                                                        index: 405
+                                                                                                                    },
+                                                                                                                    end: Position {
+                                                                                                                        line: 19,
+                                                                                                                        column: 22,
+                                                                                                                        index: 406
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            start: Position {
+                                                                                                                line: 20,
+                                                                                                                column: 19,
+                                                                                                                index: 425
+                                                                                                            },
+                                                                                                            end: Position {
+                                                                                                                line: 20,
+                                                                                                                column: 20,
+                                                                                                                index: 426
+                                                                                                            }
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    start: Position {
+                                                                                                        line: 21,
+                                                                                                        column: 17,
+                                                                                                        index: 443
+                                                                                                    },
+                                                                                                    end: Position {
+                                                                                                        line: 21,
+                                                                                                        column: 18,
+                                                                                                        index: 444
+                                                                                                    }
+                                                                                                }
+                                                                                            ],
+                                                                                            start: Position {
+                                                                                                line: 22,
+                                                                                                column: 15,
+                                                                                                index: 459
+                                                                                            },
+                                                                                            end: Position {
+                                                                                                line: 22,
+                                                                                                column: 16,
+                                                                                                index: 460
+                                                                                            }
+                                                                                        },
+                                                                                        start: Position {
+                                                                                            line: 8,
+                                                                                            column: 15,
+                                                                                            index: 100
+                                                                                        },
+                                                                                        end: Position {
+                                                                                            line: 22,
+                                                                                            column: 16,
+                                                                                            index: 460
+                                                                                        }
+                                                                                    }
+                                                                                ],
+                                                                                start: Position {
+                                                                                    line: 7,
+                                                                                    column: 18,
+                                                                                    index: 84
+                                                                                },
+                                                                                end: Position {
+                                                                                    line: 23,
+                                                                                    column: 14,
+                                                                                    index: 474
+                                                                                }
+                                                                            },
+                                                                            start: Position {
+                                                                                line: 7,
+                                                                                column: 13,
+                                                                                index: 79
+                                                                            },
+                                                                            end: Position {
+                                                                                line: 23,
+                                                                                column: 14,
+                                                                                index: 474
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    start: Position {
+                                                                        line: 6,
+                                                                        column: 16,
+                                                                        index: 65
+                                                                    },
+                                                                    end: Position {
+                                                                        line: 24,
+                                                                        column: 12,
+                                                                        index: 486
+                                                                    }
+                                                                },
+                                                                start: Position {
+                                                                    line: 6,
+                                                                    column: 11,
+                                                                    index: 60
+                                                                },
+                                                                end: Position {
+                                                                    line: 24,
+                                                                    column: 12,
+                                                                    index: 486
+                                                                }
+                                                            }
+                                                        ],
+                                                        start: Position {
+                                                            line: 5,
+                                                            column: 14,
+                                                            index: 48
+                                                        },
+                                                        end: Position {
+                                                            line: 25,
+                                                            column: 10,
+                                                            index: 496
+                                                        }
+                                                    },
+                                                    start: Position {
+                                                        line: 5,
+                                                        column: 9,
+                                                        index: 43
+                                                    },
+                                                    end: Position {
+                                                        line: 25,
+                                                        column: 10,
+                                                        index: 496
+                                                    }
+                                                }
+                                            ],
+                                            start: Position {
+                                                line: 4,
+                                                column: 12,
+                                                index: 33
+                                            },
+                                            end: Position {
+                                                line: 26,
+                                                column: 8,
+                                                index: 504
+                                            }
+                                        },
+                                        start: Position {
+                                            line: 4,
+                                            column: 7,
+                                            index: 28
+                                        },
+                                        end: Position {
+                                            line: 26,
+                                            column: 8,
+                                            index: 504
+                                        }
+                                    }
+                                ],
+                                start: Position {
+                                    line: 3,
+                                    column: 10,
+                                    index: 20
+                                },
+                                end: Position {
+                                    line: 27,
+                                    column: 6,
+                                    index: 510
+                                }
+                            },
+                            start: Position {
+                                line: 3,
+                                column: 5,
+                                index: 15
+                            },
+                            end: Position {
+                                line: 27,
+                                column: 6,
+                                index: 510
+                            }
+                        }
+                    ],
+                    start: Position {
+                        line: 2,
+                        column: 8,
+                        index: 9
+                    },
+                    end: Position {
+                        line: 28,
+                        column: 4,
+                        index: 514
+                    }
+                },
+                start: Position {
+                    line: 2,
+                    column: 3,
+                    index: 4
+                },
+                end: Position {
+                    line: 28,
+                    column: 4,
+                    index: 514
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 1,
+            index: 0
+        },
+        end: Position {
+            line: 29,
+            column: 2,
+            index: 516
+        }
+    }
+)

@@ -1,0 +1,334 @@
+JSON:
+{
+  "quota\"tion": "reverse\\solidus",
+  "soli\/dus": "back\bspace",
+  "form\ffeed": "new\nline",
+  "re\rturn": "tab\tsymbol",
+  "hex\u0001digit": "",
+  "\"\"\"\"": "\\\\\\",
+  "\/": "\b",
+  "\"\/": "\"\\\/\b\f\n\r\t\u0001"
+}
+
+
+Value:
+Some(
+    Object {
+        children: [
+            Property {
+                key: Identifier {
+                    raw: "quota\\\"tion",
+                    start: Position {
+                        line: 2,
+                        column: 3,
+                        index: 4
+                    },
+                    end: Position {
+                        line: 2,
+                        column: 16,
+                        index: 17
+                    }
+                },
+                value: String {
+                    raw: "reverse\\\\solidus",
+                    start: Position {
+                        line: 2,
+                        column: 18,
+                        index: 19
+                    },
+                    end: Position {
+                        line: 2,
+                        column: 36,
+                        index: 37
+                    }
+                },
+                start: Position {
+                    line: 2,
+                    column: 3,
+                    index: 4
+                },
+                end: Position {
+                    line: 2,
+                    column: 36,
+                    index: 37
+                }
+            },
+            Property {
+                key: Identifier {
+                    raw: "soli\\/dus",
+                    start: Position {
+                        line: 3,
+                        column: 3,
+                        index: 41
+                    },
+                    end: Position {
+                        line: 3,
+                        column: 14,
+                        index: 52
+                    }
+                },
+                value: String {
+                    raw: "back\\bspace",
+                    start: Position {
+                        line: 3,
+                        column: 16,
+                        index: 54
+                    },
+                    end: Position {
+                        line: 3,
+                        column: 29,
+                        index: 67
+                    }
+                },
+                start: Position {
+                    line: 3,
+                    column: 3,
+                    index: 41
+                },
+                end: Position {
+                    line: 3,
+                    column: 29,
+                    index: 67
+                }
+            },
+            Property {
+                key: Identifier {
+                    raw: "form\\ffeed",
+                    start: Position {
+                        line: 4,
+                        column: 3,
+                        index: 71
+                    },
+                    end: Position {
+                        line: 4,
+                        column: 15,
+                        index: 83
+                    }
+                },
+                value: String {
+                    raw: "new\\nline",
+                    start: Position {
+                        line: 4,
+                        column: 17,
+                        index: 85
+                    },
+                    end: Position {
+                        line: 4,
+                        column: 28,
+                        index: 96
+                    }
+                },
+                start: Position {
+                    line: 4,
+                    column: 3,
+                    index: 71
+                },
+                end: Position {
+                    line: 4,
+                    column: 28,
+                    index: 96
+                }
+            },
+            Property {
+                key: Identifier {
+                    raw: "re\\rturn",
+                    start: Position {
+                        line: 5,
+                        column: 3,
+                        index: 100
+                    },
+                    end: Position {
+                        line: 5,
+                        column: 13,
+                        index: 110
+                    }
+                },
+                value: String {
+                    raw: "tab\\tsymbol",
+                    start: Position {
+                        line: 5,
+                        column: 15,
+                        index: 112
+                    },
+                    end: Position {
+                        line: 5,
+                        column: 28,
+                        index: 125
+                    }
+                },
+                start: Position {
+                    line: 5,
+                    column: 3,
+                    index: 100
+                },
+                end: Position {
+                    line: 5,
+                    column: 28,
+                    index: 125
+                }
+            },
+            Property {
+                key: Identifier {
+                    raw: "hex\\u0001digit",
+                    start: Position {
+                        line: 6,
+                        column: 3,
+                        index: 129
+                    },
+                    end: Position {
+                        line: 6,
+                        column: 19,
+                        index: 145
+                    }
+                },
+                value: String {
+                    raw: "",
+                    start: Position {
+                        line: 6,
+                        column: 21,
+                        index: 147
+                    },
+                    end: Position {
+                        line: 6,
+                        column: 23,
+                        index: 149
+                    }
+                },
+                start: Position {
+                    line: 6,
+                    column: 3,
+                    index: 129
+                },
+                end: Position {
+                    line: 6,
+                    column: 23,
+                    index: 149
+                }
+            },
+            Property {
+                key: Identifier {
+                    raw: "\\\"\\\"\\\"\\\"",
+                    start: Position {
+                        line: 7,
+                        column: 3,
+                        index: 153
+                    },
+                    end: Position {
+                        line: 7,
+                        column: 13,
+                        index: 163
+                    }
+                },
+                value: String {
+                    raw: "\\\\\\\\\\\\",
+                    start: Position {
+                        line: 7,
+                        column: 15,
+                        index: 165
+                    },
+                    end: Position {
+                        line: 7,
+                        column: 23,
+                        index: 173
+                    }
+                },
+                start: Position {
+                    line: 7,
+                    column: 3,
+                    index: 153
+                },
+                end: Position {
+                    line: 7,
+                    column: 23,
+                    index: 173
+                }
+            },
+            Property {
+                key: Identifier {
+                    raw: "\\/",
+                    start: Position {
+                        line: 8,
+                        column: 3,
+                        index: 177
+                    },
+                    end: Position {
+                        line: 8,
+                        column: 7,
+                        index: 181
+                    }
+                },
+                value: String {
+                    raw: "\\b",
+                    start: Position {
+                        line: 8,
+                        column: 9,
+                        index: 183
+                    },
+                    end: Position {
+                        line: 8,
+                        column: 13,
+                        index: 187
+                    }
+                },
+                start: Position {
+                    line: 8,
+                    column: 3,
+                    index: 177
+                },
+                end: Position {
+                    line: 8,
+                    column: 13,
+                    index: 187
+                }
+            },
+            Property {
+                key: Identifier {
+                    raw: "\\\"\\/",
+                    start: Position {
+                        line: 9,
+                        column: 3,
+                        index: 191
+                    },
+                    end: Position {
+                        line: 9,
+                        column: 9,
+                        index: 197
+                    }
+                },
+                value: String {
+                    raw: "\\\"\\\\\\/\\b\\f\\n\\r\\t\\u0001",
+                    start: Position {
+                        line: 9,
+                        column: 11,
+                        index: 199
+                    },
+                    end: Position {
+                        line: 9,
+                        column: 35,
+                        index: 223
+                    }
+                },
+                start: Position {
+                    line: 9,
+                    column: 3,
+                    index: 191
+                },
+                end: Position {
+                    line: 9,
+                    column: 35,
+                    index: 223
+                }
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 1,
+            index: 0
+        },
+        end: Position {
+            line: 10,
+            column: 2,
+            index: 225
+        }
+    }
+)
