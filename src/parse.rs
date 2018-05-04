@@ -1,5 +1,3 @@
-#![allow(dead_code)]
-
 use tokenize::{Position, Token, TokenType};
 
 enum ObjectStates {
@@ -7,12 +5,6 @@ enum ObjectStates {
     OpenObject,
     Property,
     Comma,
-}
-
-enum PropertyStates {
-    Start,
-    Key,
-    Colon,
 }
 
 enum ArrayStates {
