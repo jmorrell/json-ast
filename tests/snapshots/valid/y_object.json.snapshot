@@ -2,8 +2,8 @@ JSON:
 {"asd":"sdf", "dfg":"fgh"}
 
 Value:
-Some(
-    Object {
+Success {
+    tree: Object {
         children: [
             Property {
                 key: Identifier {
@@ -93,4 +93,4 @@ Some(
             index: 26
         }
     }
-)
+}

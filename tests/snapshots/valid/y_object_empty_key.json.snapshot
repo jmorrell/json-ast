@@ -2,8 +2,8 @@ JSON:
 {"":0}
 
 Value:
-Some(
-    Object {
+Success {
+    tree: Object {
         children: [
             Property {
                 key: Identifier {
@@ -55,4 +55,4 @@ Some(
             index: 6
         }
     }
-)
+}

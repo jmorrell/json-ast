@@ -2,8 +2,8 @@ JSON:
 ["\"\\\/\b\f\n\r\t"]
 
 Value:
-Some(
-    Array {
+Success {
+    tree: Array {
         children: [
             String {
                 raw: "\\\"\\\\\\/\\b\\f\\n\\r\\t",
@@ -30,4 +30,4 @@ Some(
             index: 20
         }
     }
-)
+}

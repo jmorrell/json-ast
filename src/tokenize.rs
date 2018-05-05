@@ -1,32 +1,4 @@
-#[derive(Copy, Clone, Debug)]
-pub enum TokenType {
-  LeftBrace,    // {
-  RightBrace,   // }
-  LeftBracket,  // [
-  RightBracket, // ]
-  Colon,        // :
-  Comma,        // ,
-  String,       //
-  Number,       //
-  True,         // true
-  False,        // false
-  Null,         // null
-}
-
-#[derive(Copy, Clone, Debug)]
-pub struct Position {
-  pub line: usize,
-  pub column: usize,
-  pub index: usize,
-}
-
-#[derive(Clone, Debug)]
-pub struct Token {
-  pub kind: TokenType,
-  pub value: Option<String>,
-  pub start: Position,
-  pub end: Position,
-}
+use types::{TokenType, Position, Token};
 
 enum Escapes {
   Quotation,
@@ -40,7 +12,6 @@ enum Escapes {
   HexadecimalDigits,
 }
 
-#[derive(Debug)]
 enum StringStates {
   Start,
   StartQuoteOrChar,
@@ -340,14 +311,6 @@ pub fn tokenize(input: &str) -> Vec<Token> {
   let mut tokens: Vec<Token> = Vec::new();
 
   while index < input.len() {
-    // let c = input.as_bytes()[index]; 
-    // let mut st = Vec::new();
-    // st.push(c);
-    // println!("index: {}, c: {}, c: {:?}", index, c, String::from_utf8(st));
-    // if index > 5 {
-    //   println!("{:#?}", tokens);
-    // }
-
     if let Some(pos) = parse_whitespace(input, index, line, column) {
       line = pos.line;
       column = pos.column;

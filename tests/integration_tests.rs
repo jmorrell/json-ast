@@ -9,6 +9,24 @@ use std::env;
 use std::ffi::OsString;
 
 #[test]
+fn fail_0() {
+  parse(r##""##);
+  assert!(true);
+}
+
+#[test]
+fn fail_1() {
+  parse(r##"["a", "b""##);
+  assert!(true);
+}
+
+#[test]
+fn fail_2() {
+  parse(r##"[][]"##);
+  assert!(true);
+}
+
+#[test]
 fn pass_0() {
   parse(r##"
 {
@@ -89,14 +107,14 @@ fn pass_1() {
         1e00,2e+00,2e-00
         ,"rosebud"]
 
-        "##).unwrap();
+        "##);
 
   assert!(true);
 }
 
 #[test]
 fn pass_2() {
-  parse(r#"[[[[[[[[[[[[[[[[[[["Not too deep"]]]]]]]]]]]]]]]]]]]"#).unwrap();
+  parse(r#"[[[[[[[[[[[[[[[[[[["Not too deep"]]]]]]]]]]]]]]]]]]]"#);
 
   assert!(true);
 }
@@ -114,7 +132,7 @@ fn pass_3() {
         }
 
         "#,
-  ).unwrap();
+  );
 
   assert!(true);
 }

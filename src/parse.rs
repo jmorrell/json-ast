@@ -1,4 +1,4 @@
-use tokenize::{Position, Token, TokenType};
+use types::{TokenType, Token, Node, Property, Identifier, Parsed};
 
 enum ObjectStates {
     Start,
@@ -10,57 +10,8 @@ enum ObjectStates {
 enum ArrayStates {
     Start,
     OpenArray,
-    Value,
+    Node,
     Comma,
-}
-
-#[derive(Clone, Debug)]
-pub enum Value {
-    Object {
-        children: Vec<Property>,
-        start: Position,
-        end: Position,
-    },
-    Array {
-        children: Vec<Value>,
-        start: Position,
-        end: Position,
-    },
-    String {
-        raw: String,
-        start: Position,
-        end: Position,
-    },
-    Number {
-        raw: String,
-        start: Position,
-        end: Position,
-    },
-    Boolean {
-        raw: String,
-        start: Position,
-        end: Position,
-    },
-    Null {
-        raw: String,
-        start: Position,
-        end: Position,
-    },
-}
-
-#[derive(Clone, Debug)]
-pub struct Property {
-    pub key: Identifier,
-    pub value: Value,
-    pub start: Position,
-    pub end: Position,
-}
-
-#[derive(Clone, Debug)]
-pub struct Identifier {
-    pub raw: String,
-    pub start: Position,
-    pub end: Position,
 }
 
 fn parse_property(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<Property> {
@@ -77,7 +28,7 @@ fn parse_property(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Optio
             };
 
             *index += 2;
-            let value = parse_value(_input, tokens, index).unwrap();
+            let value = inner_parse_value(_input, tokens, index).unwrap();
             let last_token = &tokens[*index-1];
 
             return Some(Property {
@@ -95,7 +46,7 @@ fn parse_property(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Optio
     }
 }
 
-fn parse_object(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<Value> {
+fn parse_object(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<Node> {
     let mut state = ObjectStates::Start;
     let mut children: Vec<Property> = vec![];
     let start_index = *index;
@@ -116,7 +67,7 @@ fn parse_object(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<
                 if let TokenType::RightBrace = token.kind {
                     let start_token = &tokens[start_index];
                     *index += 1;
-                    return Some(Value::Object {
+                    return Some(Node::Object {
                         children,
                         start: start_token.start,
                         end: token.end,
@@ -135,7 +86,7 @@ fn parse_object(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<
                 TokenType::RightBrace => {
                     let start_token = &tokens[start_index];
                     *index += 1;
-                    return Some(Value::Object {
+                    return Some(Node::Object {
                         children,
                         start: start_token.start,
                         end: token.end,
@@ -158,9 +109,9 @@ fn parse_object(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<
     None
 }
 
-fn parse_array(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<Value> {
+fn parse_array(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<Node> {
     let mut state = ArrayStates::Start;
-    let mut children: Vec<Value> = vec![];
+    let mut children: Vec<Node> = vec![];
     let start_index = *index;
 
     while *index < tokens.len() {
@@ -179,22 +130,22 @@ fn parse_array(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<V
                 if let TokenType::RightBracket = token.kind {
                     let start_token = &tokens[start_index];
                     *index += 1;
-                    return Some(Value::Array {
+                    return Some(Node::Array {
                         children,
                         start: start_token.start,
                         end: token.end,
                     });
                 } else {
-                    let val = parse_value(_input, tokens, index);
+                    let val = inner_parse_value(_input, tokens, index);
                     children.push(val.unwrap());
-                    state = ArrayStates::Value;
+                    state = ArrayStates::Node;
                 }
             }
-            ArrayStates::Value => match token.kind {
+            ArrayStates::Node => match token.kind {
                 TokenType::RightBracket => {
                     let start_token = &tokens[start_index];
                     *index += 1;
-                    return Some(Value::Array {
+                    return Some(Node::Array {
                         children,
                         start: start_token.start,
                         end: token.end,
@@ -209,9 +160,9 @@ fn parse_array(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<V
                 }
             },
             ArrayStates::Comma => {
-                let val = parse_value(_input, tokens, index);
+                let val = inner_parse_value(_input, tokens, index);
                 children.push(val.unwrap());
-                state = ArrayStates::Value;
+                state = ArrayStates::Node;
             }
         }
     }
@@ -219,13 +170,13 @@ fn parse_array(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<V
     None
 }
 
-fn parse_literal(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<Value> {
+fn parse_literal(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<Node> {
     let token = &tokens[*index];
 
     match token.kind {
         TokenType::String => {
             *index += 1;
-            Some(Value::String {
+            Some(Node::String {
                 raw: token.clone().value.unwrap(),
                 start: token.start,
                 end: token.end,
@@ -233,7 +184,7 @@ fn parse_literal(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option
         }
         TokenType::Number => {
             *index += 1;
-            Some(Value::Number {
+            Some(Node::Number {
                 raw: token.clone().value.unwrap(),
                 start: token.start,
                 end: token.end,
@@ -241,7 +192,7 @@ fn parse_literal(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option
         }
         TokenType::True | TokenType::False => {
             *index += 1;
-            Some(Value::Boolean {
+            Some(Node::Boolean {
                 raw: token.clone().value.unwrap(),
                 start: token.start,
                 end: token.end,
@@ -249,7 +200,7 @@ fn parse_literal(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option
         }
         TokenType::Null => {
             *index += 1;
-            Some(Value::Null {
+            Some(Node::Null {
                 raw: token.clone().value.unwrap(),
                 start: token.start,
                 end: token.end,
@@ -264,7 +215,7 @@ fn parse_literal(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option
     }
 }
 
-pub fn parse_value(input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<Value> {
+fn inner_parse_value(input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<Node> {
     if let Some(val) = parse_literal(input, tokens, index) {
         Some(val)
     } else if let Some(val) = parse_array(input, tokens, index) {
@@ -276,16 +227,17 @@ pub fn parse_value(input: &str, tokens: &Vec<Token>, index: &mut usize) -> Optio
     }
 }
 
-// fn parse(input: &str) {
-//     let tokens = tokenize(input);
-//     let mut index: usize = 0;
-
-//     // println!("Tokens: {:?}", tokens);
-
-//     if tokens.len() == 0 {
-//         println!("this is an error case");
-//     }
-
-//     let value = parse_value(input, &tokens, &mut index);
-//     println!("JSON:\n{}\nParsed:\n{:#?}", input, value.unwrap());
-// }
+pub fn parse_value(input: &str, tokens: &Vec<Token>, index: &mut usize) -> Parsed {
+    if let Some(val) = parse_literal(input, tokens, index) {
+        Parsed::Success { tree: val }
+    } else if let Some(val) = parse_array(input, tokens, index) {
+        Parsed::Success { tree: val }
+    } else if let Some(val) = parse_object(input, tokens, index) {
+        Parsed::Success { tree: val }
+    } else {
+        Parsed::Failure {
+            tree: None,
+            errors: vec!(),
+        }
+    }
+}

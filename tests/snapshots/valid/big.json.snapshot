@@ -118,8 +118,8 @@ JSON:
 
 
 Value:
-Some(
-    Array {
+Success {
+    tree: Array {
         children: [
             Object {
                 children: [
@@ -2923,4 +2923,4 @@ Some(
             index: 2975
         }
     }
-)
+}

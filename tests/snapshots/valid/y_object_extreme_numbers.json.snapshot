@@ -2,8 +2,8 @@ JSON:
 { "min": -1.0e+28, "max": 1.0e+28 }
 
 Value:
-Some(
-    Object {
+Success {
+    tree: Object {
         children: [
             Property {
                 key: Identifier {
@@ -93,4 +93,4 @@ Some(
             index: 35
         }
     }
-)
+}

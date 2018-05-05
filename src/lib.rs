@@ -1,12 +1,14 @@
 
 mod tokenize;
 mod parse;
+mod types;
 
 use tokenize::{tokenize};
 use parse::parse_value;
-pub use parse::Value;
+pub use types::{Node, Parsed};
 
-pub fn parse(input: &str) -> Option<Value> {
+
+pub fn parse(input: &str) -> Parsed {
     let tokens = tokenize(input);
 
     let mut index: usize = 0;

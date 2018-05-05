@@ -2,8 +2,8 @@ JSON:
 ["\uFDD0"]
 
 Value:
-Some(
-    Array {
+Success {
+    tree: Array {
         children: [
             String {
                 raw: "\\uFDD0",
@@ -30,4 +30,4 @@ Some(
             index: 10
         }
     }
-)
+}

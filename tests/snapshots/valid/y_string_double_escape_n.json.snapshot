@@ -2,8 +2,8 @@ JSON:
 ["\\n"]
 
 Value:
-Some(
-    Array {
+Success {
+    tree: Array {
         children: [
             String {
                 raw: "\\\\n",
@@ -30,4 +30,4 @@ Some(
             index: 7
         }
     }
-)
+}

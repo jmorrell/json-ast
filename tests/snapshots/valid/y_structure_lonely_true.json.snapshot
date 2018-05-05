@@ -2,8 +2,8 @@ JSON:
 true
 
 Value:
-Some(
-    Boolean {
+Success {
+    tree: Boolean {
         raw: "true",
         start: Position {
             line: 1,
@@ -16,4 +16,4 @@ Some(
             index: 4
         }
     }
-)
+}

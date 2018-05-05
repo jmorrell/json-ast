@@ -3,8 +3,8 @@ JSON:
 
 
 Value:
-Some(
-    Number {
+Success {
+    tree: Number {
         raw: "12345",
         start: Position {
             line: 1,
@@ -17,4 +17,4 @@ Some(
             index: 5
         }
     }
-)
+}

@@ -2,8 +2,8 @@ JSON:
 -0.1
 
 Value:
-Some(
-    Number {
+Success {
+    tree: Number {
         raw: "-0.1",
         start: Position {
             line: 1,
@@ -16,4 +16,4 @@ Some(
             index: 4
         }
     }
-)
+}

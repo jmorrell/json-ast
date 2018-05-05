@@ -2,8 +2,8 @@ JSON:
 [123.456789]
 
 Value:
-Some(
-    Array {
+Success {
+    tree: Array {
         children: [
             Number {
                 raw: "123.456789",
@@ -30,4 +30,4 @@ Some(
             index: 12
         }
     }
-)
+}

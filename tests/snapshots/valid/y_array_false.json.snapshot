@@ -2,8 +2,8 @@ JSON:
 [false]
 
 Value:
-Some(
-    Array {
+Success {
+    tree: Array {
         children: [
             Boolean {
                 raw: "false",
@@ -30,4 +30,4 @@ Some(
             index: 7
         }
     }
-)
+}

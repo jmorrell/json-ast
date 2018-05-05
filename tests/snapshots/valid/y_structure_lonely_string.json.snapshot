@@ -2,8 +2,8 @@ JSON:
 "asd"
 
 Value:
-Some(
-    String {
+Success {
+    tree: String {
         raw: "asd",
         start: Position {
             line: 1,
@@ -16,4 +16,4 @@ Some(
             index: 5
         }
     }
-)
+}

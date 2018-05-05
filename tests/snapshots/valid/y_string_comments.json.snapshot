@@ -2,8 +2,8 @@ JSON:
 ["a/*b*/c/*d//e"]
 
 Value:
-Some(
-    Array {
+Success {
+    tree: Array {
         children: [
             String {
                 raw: "a/*b*/c/*d//e",
@@ -30,4 +30,4 @@ Some(
             index: 17
         }
     }
-)
+}
