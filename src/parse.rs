@@ -1,5 +1,8 @@
-use types::{TokenType, Token, Node, Property, Identifier, Parsed};
+use types::{Identifier, Node, Parsed, Property, Token, TokenType};
 
+use std::iter::{Iterator, Peekable};
+
+#[derive(Debug)]
 enum ObjectStates {
     Start,
     OpenObject,
@@ -7,6 +10,7 @@ enum ObjectStates {
     Comma,
 }
 
+#[derive(Debug)]
 enum ArrayStates {
     Start,
     OpenArray,
@@ -14,230 +18,270 @@ enum ArrayStates {
     Comma,
 }
 
-fn parse_property(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<Property> {
-    let token = &tokens[*index];
-
-    // The different states of parsing for properties are sequential until the last
-    // so there's no need to break this into a FSM
-    if let TokenType::String = token.kind {
-        if let TokenType::Colon = (&tokens[*index + 1]).kind {
-            let key = Identifier {
-                raw: token.clone().value.unwrap(),
-                start: token.start,
-                end: token.end,
-            };
-
-            *index += 2;
-            let value = inner_parse_value(_input, tokens, index).unwrap();
-            let last_token = &tokens[*index-1];
-
-            return Some(Property {
-                key,
-                value,
-                start: token.start,
-                end: last_token.end,
-            });
-        } else {
-            // property String was not followed by a Colon
-            panic!("not implemented yet");
-        }
-    } else {
-        None
-    }
+#[derive(Debug)]
+enum PropertyStates {
+    Start,
+    Key,
+    Colon,
 }
 
-fn parse_object(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<Node> {
+fn parse_property<'a, It>(tokens: &mut Peekable<It>) -> Option<Property>
+where
+    It: Iterator<Item = &'a Token>,
+{
+    let mut state = PropertyStates::Start;
+    let start = tokens.peek().unwrap().start;
+    let mut key = Identifier {
+        raw: "".to_string(),
+        start,
+        end: start,
+    };
+
+    while let Some(&token) = tokens.peek() {
+        match state {
+            PropertyStates::Start => {
+                if let TokenType::String = token.kind {
+                    key = Identifier {
+                        raw: token.clone().value.unwrap(),
+                        start: token.start,
+                        end: token.end,
+                    };
+                    tokens.next();
+                    state = PropertyStates::Colon;
+                } else {
+                    return None;
+                }
+            }
+            PropertyStates::Colon => {
+                if let TokenType::Colon = token.kind {
+                    tokens.next();
+                    state = PropertyStates::Key;
+                } else {
+                    // property String was not followed by a Colon
+                    panic!("not implemented yet");
+                    // invalid property
+                }
+            }
+            PropertyStates::Key => {
+                if let Some(value) = inner_parse_value(tokens) {
+                    return Some(Property {
+                        key,
+                        value,
+                        start,
+                        end: token.end,
+                    });
+                } else {
+                    return None;
+                }
+            }
+        }
+    }
+
+    // Reached the end of tokens
+    panic!("Not implemented yet");
+}
+
+fn parse_object<'a, It>(tokens: &mut Peekable<It>) -> Option<Node>
+where
+    It: Iterator<Item = &'a Token>,
+{
     let mut state = ObjectStates::Start;
     let mut children: Vec<Property> = vec![];
-    let start_index = *index;
+    let start = tokens.peek().unwrap().start;
 
-    while *index < tokens.len() {
-        let token = &tokens[*index];
-
+    while let Some(&token) = tokens.peek() {
         match state {
             ObjectStates::Start => {
                 if let TokenType::LeftBrace = token.kind {
+                    tokens.next();
                     state = ObjectStates::OpenObject;
-                    *index += 1;
                 } else {
+                    // We validate this before calling this object, so it would be a bug
                     return None;
                 }
             }
             ObjectStates::OpenObject => {
                 if let TokenType::RightBrace = token.kind {
-                    let start_token = &tokens[start_index];
-                    *index += 1;
+                    tokens.next();
                     return Some(Node::Object {
                         children,
-                        start: start_token.start,
+                        start,
                         end: token.end,
                     });
                 } else {
-                    let val = parse_property(_input, tokens, index);
+                    let val = parse_property(tokens);
+                    // TODO: remove unwrap
                     children.push(val.unwrap());
                     state = ObjectStates::Property;
                 }
             }
             ObjectStates::Property => match token.kind {
                 TokenType::Comma => {
-                    *index += 1;
+                    tokens.next();
                     state = ObjectStates::Comma;
                 }
                 TokenType::RightBrace => {
-                    let start_token = &tokens[start_index];
-                    *index += 1;
+                    tokens.next();
                     return Some(Node::Object {
                         children,
-                        start: start_token.start,
+                        start,
                         end: token.end,
                     });
                 }
+                // invalid object, expected , or }
                 _ => panic!("not implemented"),
             },
             ObjectStates::Comma => {
-                let val = parse_property(_input, tokens, index);
+                let val = parse_property(tokens);
                 if let Some(value) = val {
                     children.push(value);
                     state = ObjectStates::Property;
                 } else {
+                    // trailing commas end up here
                     panic!("not implemented")
                 }
             }
         }
     }
 
-    None
+    // Reached the end of tokens
+    panic!("Not implemented yet");
+    // invalid object
 }
 
-fn parse_array(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<Node> {
+fn parse_array<'a, It>(tokens: &mut Peekable<It>) -> Option<Node>
+where
+    It: Iterator<Item = &'a Token>,
+{
     let mut state = ArrayStates::Start;
     let mut children: Vec<Node> = vec![];
-    let start_index = *index;
+    let start = tokens.peek().unwrap().start;
 
-    while *index < tokens.len() {
-        let token = &tokens[*index];
-
+    while let Some(&token) = tokens.peek() {
         match state {
             ArrayStates::Start => {
                 if let TokenType::LeftBracket = token.kind {
+                    tokens.next();
                     state = ArrayStates::OpenArray;
-                    *index += 1;
                 } else {
+                    // We validate this before calling this object, so it would be a bug
                     return None;
                 }
             }
             ArrayStates::OpenArray => {
                 if let TokenType::RightBracket = token.kind {
-                    let start_token = &tokens[start_index];
-                    *index += 1;
+                    tokens.next();
                     return Some(Node::Array {
                         children,
-                        start: start_token.start,
+                        start,
                         end: token.end,
                     });
                 } else {
-                    let val = inner_parse_value(_input, tokens, index);
+                    let val = inner_parse_value(tokens);
+                    // TODO: remove unwrap
                     children.push(val.unwrap());
                     state = ArrayStates::Node;
                 }
             }
             ArrayStates::Node => match token.kind {
                 TokenType::RightBracket => {
-                    let start_token = &tokens[start_index];
-                    *index += 1;
+                    tokens.next();
                     return Some(Node::Array {
                         children,
-                        start: start_token.start,
+                        start,
                         end: token.end,
                     });
                 }
                 TokenType::Comma => {
+                    tokens.next();
                     state = ArrayStates::Comma;
-                    *index += 1;
                 }
                 _ => {
                     panic!("Not implemented yet");
                 }
             },
             ArrayStates::Comma => {
-                let val = inner_parse_value(_input, tokens, index);
+                let val = inner_parse_value(tokens);
                 children.push(val.unwrap());
                 state = ArrayStates::Node;
             }
         }
     }
 
-    None
+    // Reached the end of tokens
+    panic!("Not implemented yet");
 }
 
-fn parse_literal(_input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<Node> {
-    let token = &tokens[*index];
-
-    match token.kind {
-        TokenType::String => {
-            *index += 1;
-            Some(Node::String {
+fn parse_literal<'a, It>(tokens: &mut Peekable<It>) -> Option<Node>
+where
+    It: Iterator<Item = &'a Token>,
+{
+    match tokens.next() {
+        Some(token) => match token.kind {
+            TokenType::String => Some(Node::String {
                 raw: token.clone().value.unwrap(),
                 start: token.start,
                 end: token.end,
-            })
-        }
-        TokenType::Number => {
-            *index += 1;
-            Some(Node::Number {
+            }),
+            TokenType::Number => Some(Node::Number {
                 raw: token.clone().value.unwrap(),
                 start: token.start,
                 end: token.end,
-            })
-        }
-        TokenType::True | TokenType::False => {
-            *index += 1;
-            Some(Node::Boolean {
+            }),
+            TokenType::True | TokenType::False => Some(Node::Boolean {
                 raw: token.clone().value.unwrap(),
                 start: token.start,
                 end: token.end,
-            })
-        }
-        TokenType::Null => {
-            *index += 1;
-            Some(Node::Null {
+            }),
+            TokenType::Null => Some(Node::Null {
                 raw: token.clone().value.unwrap(),
                 start: token.start,
                 end: token.end,
-            })
+            }),
+            TokenType::LeftBrace
+            | TokenType::RightBrace
+            | TokenType::LeftBracket
+            | TokenType::RightBracket
+            | TokenType::Colon
+            | TokenType::Comma => None,
+        },
+        None => {
+            panic!("expected a literal");
         }
-        TokenType::LeftBrace
-        | TokenType::RightBrace
-        | TokenType::LeftBracket
-        | TokenType::RightBracket
-        | TokenType::Colon
-        | TokenType::Comma => None,
     }
 }
 
-fn inner_parse_value(input: &str, tokens: &Vec<Token>, index: &mut usize) -> Option<Node> {
-    if let Some(val) = parse_literal(input, tokens, index) {
-        Some(val)
-    } else if let Some(val) = parse_array(input, tokens, index) {
-        Some(val)
-    } else if let Some(val) = parse_object(input, tokens, index) {
-        Some(val)
-    } else {
-        None
+fn inner_parse_value<'a, It>(tokens: &mut Peekable<It>) -> Option<Node>
+where
+    It: Iterator<Item = &'a Token>,
+{
+    match tokens.peek() {
+        Some(&t) => match t.kind {
+            TokenType::LeftBrace => parse_object(tokens),
+            TokenType::LeftBracket => parse_array(tokens),
+            TokenType::String
+            | TokenType::Number
+            | TokenType::True
+            | TokenType::False
+            | TokenType::Null => parse_literal(tokens),
+            TokenType::RightBrace
+            | TokenType::RightBracket
+            | TokenType::Colon
+            | TokenType::Comma => None,
+        },
+        None => None,
     }
 }
 
-pub fn parse_value(input: &str, tokens: &Vec<Token>, index: &mut usize) -> Parsed {
-    if let Some(val) = parse_literal(input, tokens, index) {
-        Parsed::Success { tree: val }
-    } else if let Some(val) = parse_array(input, tokens, index) {
-        Parsed::Success { tree: val }
-    } else if let Some(val) = parse_object(input, tokens, index) {
-        Parsed::Success { tree: val }
-    } else {
-        Parsed::Failure {
+pub fn parse_value(tokens: &Vec<Token>) -> Parsed {
+    let mut iter = tokens.iter().peekable();
+    let val = inner_parse_value(&mut iter);
+
+    match val {
+        Some(v) => Parsed::Success { tree: v },
+        None => Parsed::Failure {
             tree: None,
-            errors: vec!(),
-        }
+            errors: vec![],
+        },
     }
 }

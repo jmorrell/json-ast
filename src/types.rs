@@ -89,6 +89,7 @@ pub struct ParseError {
     pub error_type: ParseErrorType,
 }
 
+// This should probably be a Result with a custom error
 #[derive(Clone, Debug)]
 pub enum Parsed {
     Success {

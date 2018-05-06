@@ -8,27 +8,58 @@ use json_ast::parse;
 use std::env;
 use std::ffi::OsString;
 
-#[test]
-fn fail_0() {
-  parse(r##""##);
-  assert!(true);
-}
+// #[test]
+// fn trailing_comma() {
+//   parse(r##"{
+//     "test": {
+//       "foo": "bar",
+//     }
+//   }"##);
+//   assert!(true);
+// }
 
-#[test]
-fn fail_1() {
-  parse(r##"["a", "b""##);
-  assert!(true);
-}
+// #[test]
+// fn fail_0() {
+//   parse(r##""##);
+//   assert!(true);
+// }
 
-#[test]
-fn fail_2() {
-  parse(r##"[][]"##);
-  assert!(true);
-}
+// #[test]
+// fn fail_0b() {
+//   parse(
+//     r##"  
+     
+      
+      
+      
+//       "##,
+//   );
+//   assert!(true);
+// }
+
+// #[test]
+// fn fail_1() {
+//   let result = parse(r##"["a", "b""##);
+//   println!("{:#?}", result);
+//   assert!(true);
+// }
+
+// #[test]
+// fn fail_2() {
+//   parse(r##"[][]"##);
+//   assert!(true);
+// }
+
+// #[test]
+// fn fail_3() {
+//   parse(r##"[1]x"##);
+//   assert!(true);
+// }
 
 #[test]
 fn pass_0() {
-  parse(r##"
+  parse(
+    r##"
 {
   "a<": 2,
   "b)": {
@@ -42,7 +73,8 @@ fn pass_0() {
     " f ": "*±*∆"
   }
 }
-  "##);
+  "##,
+  );
   assert!(true);
 }
 
@@ -170,19 +202,18 @@ fn test_snapshots() {
 }
 
 fn test_snapshot(entry: DirEntry) {
-  let name = entry.file_name(); 
-  let saved = format!("./tests/snapshots/valid/{}.snapshot", name.into_string().unwrap());
+  let name = entry.file_name();
+  let saved = format!(
+    "./tests/snapshots/valid/{}.snapshot",
+    name.into_string().unwrap()
+  );
   let snapshot = format_snapshot(entry);
 
   let mut buffer = String::new();
   let mut f = File::open(saved).unwrap();
   f.read_to_string(&mut buffer).unwrap();
 
-  if buffer == snapshot {
-    assert!(true);
-  } else {
-    assert!(false);
-  }
+  assert_eq!(buffer, snapshot);
 }
 
 fn format_snapshot(entry: DirEntry) -> String {
@@ -197,11 +228,12 @@ fn format_snapshot(entry: DirEntry) -> String {
 }
 
 fn create_snapshot(entry: DirEntry) {
-  let name = entry.file_name(); 
+  let name = entry.file_name();
   let snapshot = format_snapshot(entry);
-  let out = format!("./tests/snapshots/valid/{}.snapshot", name.into_string().unwrap());
+  let out = format!(
+    "./tests/snapshots/valid/{}.snapshot",
+    name.into_string().unwrap()
+  );
   let mut f = File::create(out).unwrap();
   f.write_all(snapshot.as_bytes()).unwrap();
 }
-
-
