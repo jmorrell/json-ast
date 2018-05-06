@@ -64,11 +64,19 @@ where
             }
             PropertyStates::Key => {
                 if let Some(value) = inner_parse_value(tokens) {
+                    let end = match value {
+                        Node::Object { end, .. } => end,
+                        Node::Array { end, .. } => end,
+                        Node::String { end, .. } => end,
+                        Node::Number { end, .. } => end,
+                        Node::Boolean { end, .. } => end,
+                        Node::Null { end, .. } => end,
+                    };
                     return Some(Property {
                         key,
                         value,
                         start,
-                        end: token.end,
+                        end,
                     });
                 } else {
                     return None;
