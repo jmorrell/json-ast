@@ -57,6 +57,21 @@ fn missing_comma_1() {
 }
 
 #[test]
+fn missing_comma_2() {
+  parse(r##"{
+    "test": {
+      "a": 1
+      "baz": {
+        "a": "whole"
+        "new": "object"
+      },
+      "b": 2
+    }
+  }"##);
+  assert!(true);
+}
+
+#[test]
 fn missing_and_trailing_comma() {
   parse(r##"{
     "test": {
