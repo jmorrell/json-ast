@@ -72,7 +72,7 @@ where
                         Node::Boolean { end, .. } => end,
                         Node::Null { end, .. } => end,
                     };
-                    return Some(Property {
+                    return Some(Property::Valid {
                         key,
                         value,
                         start,
@@ -288,6 +288,7 @@ pub fn parse_value(tokens: &Vec<Token>) -> Parsed {
     match val {
         Some(v) => Parsed::Success { tree: v },
         None => Parsed::Failure {
+            tokens: tokens.to_vec(),
             tree: None,
             errors: vec![],
         },

@@ -18,7 +18,7 @@ Value:
 Success {
     tree: Object {
         children: [
-            Property {
+            Valid {
                 key: Identifier {
                     raw: "a<",
                     start: Position {
@@ -56,7 +56,7 @@ Success {
                     index: 11
                 }
             },
-            Property {
+            Valid {
                 key: Identifier {
                     raw: "b)",
                     start: Position {
@@ -72,7 +72,7 @@ Success {
                 },
                 value: Object {
                     children: [
-                        Property {
+                        Valid {
                             key: Identifier {
                                 raw: "c(",
                                 start: Position {
@@ -163,7 +163,7 @@ Success {
                                 index: 69
                             }
                         },
-                        Property {
+                        Valid {
                             key: Identifier {
                                 raw: "d&",
                                 start: Position {
@@ -179,7 +179,7 @@ Success {
                             },
                             value: Object {
                                 children: [
-                                    Property {
+                                    Valid {
                                         key: Identifier {
                                             raw: "e!",
                                             start: Position {
@@ -240,7 +240,7 @@ Success {
                                 index: 106
                             }
                         },
-                        Property {
+                        Valid {
                             key: Identifier {
                                 raw: ":e",
                                 start: Position {
@@ -278,7 +278,7 @@ Success {
                                 index: 124
                             }
                         },
-                        Property {
+                        Valid {
                             key: Identifier {
                                 raw: " f ",
                                 start: Position {

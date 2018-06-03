@@ -28,9 +28,6 @@ use std::ffi::OsString;
 // fn fail_0b() {
 //   parse(
 //     r##"  
-     
-      
-      
       
 //       "##,
 //   );

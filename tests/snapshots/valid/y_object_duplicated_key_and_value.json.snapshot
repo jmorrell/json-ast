@@ -5,7 +5,7 @@ Value:
 Success {
     tree: Object {
         children: [
-            Property {
+            Valid {
                 key: Identifier {
                     raw: "a",
                     start: Position {
@@ -43,7 +43,7 @@ Success {
                     index: 8
                 }
             },
-            Property {
+            Valid {
                 key: Identifier {
                     raw: "a",
                     start: Position {

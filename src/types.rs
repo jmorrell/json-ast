@@ -63,11 +63,25 @@ pub enum Node {
 }
 
 #[derive(Clone, Debug)]
-pub struct Property {
-    pub key: Identifier,
-    pub value: Node,
-    pub start: Position,
-    pub end: Position,
+pub enum InvalidPropertyReason {
+    TrailingComma,
+}
+
+#[derive(Clone, Debug)]
+pub enum Property {
+    Valid {
+        key: Identifier,
+        value: Node,
+        start: Position,
+        end: Position,
+    },
+    Invalid {
+        error: InvalidPropertyReason,
+        key: Identifier,
+        value: Node,
+        start: Position,
+        end: Position, 
+    },
 }
 
 #[derive(Clone, Debug)]
@@ -96,6 +110,7 @@ pub enum Parsed {
         tree: Node,
     },
     Failure {
+        tokens: Vec<Token>,
         tree: Option<Node>,
         errors: Vec<ParseError>,
     },

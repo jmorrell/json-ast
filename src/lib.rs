@@ -13,6 +13,7 @@ pub fn parse(input: &str) -> Parsed {
 
     if tokens.len() == 0 {
         Parsed::Failure {
+            tokens,
             tree: None,
             errors: vec!(),
         }

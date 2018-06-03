@@ -13,7 +13,7 @@ Value:
 Success {
     tree: Object {
         children: [
-            Property {
+            Valid {
                 key: Identifier {
                     raw: "a",
                     start: Position {
@@ -51,7 +51,7 @@ Success {
                     index: 13
                 }
             },
-            Property {
+            Valid {
                 key: Identifier {
                     raw: "b",
                     start: Position {
@@ -89,7 +89,7 @@ Success {
                     index: 28
                 }
             },
-            Property {
+            Valid {
                 key: Identifier {
                     raw: "c",
                     start: Position {
@@ -127,7 +127,7 @@ Success {
                     index: 41
                 }
             },
-            Property {
+            Valid {
                 key: Identifier {
                     raw: "d",
                     start: Position {
@@ -165,7 +165,7 @@ Success {
                     index: 56
                 }
             },
-            Property {
+            Valid {
                 key: Identifier {
                     raw: "e",
                     start: Position {
@@ -203,7 +203,7 @@ Success {
                     index: 70
                 }
             },
-            Property {
+            Valid {
                 key: Identifier {
                     raw: "f",
                     start: Position {
