@@ -21,6 +21,7 @@ Success {
                     }
                 },
                 value: Array {
+                    status: Valid,
                     children: [
                         Object {
                             children: [

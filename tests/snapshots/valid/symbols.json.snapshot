@@ -90,6 +90,7 @@ Success {
                                 }
                             },
                             value: Array {
+                                status: Valid,
                                 children: [
                                     String {
                                         raw: "3!",

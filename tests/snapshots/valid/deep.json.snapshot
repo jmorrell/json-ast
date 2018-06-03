@@ -152,6 +152,7 @@ Success {
                                                                                             }
                                                                                         },
                                                                                         value: Array {
+                                                                                            status: Valid,
                                                                                             children: [
                                                                                                 String {
                                                                                                     raw: "h",
@@ -167,6 +168,7 @@ Success {
                                                                                                     }
                                                                                                 },
                                                                                                 Array {
+                                                                                                    status: Valid,
                                                                                                     children: [
                                                                                                         String {
                                                                                                             raw: "i",
@@ -182,6 +184,7 @@ Success {
                                                                                                             }
                                                                                                         },
                                                                                                         Array {
+                                                                                                            status: Valid,
                                                                                                             children: [
                                                                                                                 String {
                                                                                                                     raw: "j",
@@ -197,6 +200,7 @@ Success {
                                                                                                                     }
                                                                                                                 },
                                                                                                                 Array {
+                                                                                                                    status: Valid,
                                                                                                                     children: [
                                                                                                                         String {
                                                                                                                             raw: "k",
@@ -212,6 +216,7 @@ Success {
                                                                                                                             }
                                                                                                                         },
                                                                                                                         Array {
+                                                                                                                            status: Valid,
                                                                                                                             children: [
                                                                                                                                 String {
                                                                                                                                     raw: "l",
@@ -227,6 +232,7 @@ Success {
                                                                                                                                     }
                                                                                                                                 },
                                                                                                                                 Array {
+                                                                                                                                    status: Valid,
                                                                                                                                     children: [
                                                                                                                                         String {
                                                                                                                                             raw: "m",
@@ -242,6 +248,7 @@ Success {
                                                                                                                                             }
                                                                                                                                         },
                                                                                                                                         Array {
+                                                                                                                                            status: Valid,
                                                                                                                                             children: [
                                                                                                                                                 String {
                                                                                                                                                     raw: "n",

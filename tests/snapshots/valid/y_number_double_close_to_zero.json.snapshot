@@ -5,6 +5,7 @@ JSON:
 Value:
 Success {
     tree: Array {
+        status: Valid,
         children: [
             Number {
                 raw: "-0.000000000000000000000000000000000000000000000000000000000000000000000000000001",

@@ -4,6 +4,7 @@ JSON:
 Value:
 Success {
     tree: Array {
+        status: Valid,
         children: [
             Number {
                 raw: "1E+2",

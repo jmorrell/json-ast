@@ -29,6 +29,13 @@ pub struct Token {
 }
 
 #[derive(Clone, Debug)]
+pub enum ArrayStatus {
+    Valid,
+    TrailingComma,
+    MissingComma,
+}
+
+#[derive(Clone, Debug)]
 pub enum Node {
     Object {
         children: Vec<Property>,
@@ -36,6 +43,7 @@ pub enum Node {
         end: Position,
     },
     Array {
+        status: ArrayStatus,
         children: Vec<Node>,
         start: Position,
         end: Position,

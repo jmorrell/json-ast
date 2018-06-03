@@ -1,4 +1,4 @@
-use types::{Identifier, Node, Parsed, Property, PropertyStatus, Token, TokenType};
+use types::{ArrayStatus, Identifier, Node, Parsed, Property, PropertyStatus, Token, TokenType};
 
 use std::iter::{Iterator, Peekable};
 
@@ -161,7 +161,7 @@ where
                     });
                     state = ObjectStates::Comma;
                 }
-                _ => panic!("not implemented")
+                _ => panic!("not implemented"),
             },
             ObjectStates::Comma => {
                 let val = parse_property(tokens);
@@ -225,6 +225,7 @@ where
                 if let TokenType::RightBracket = token.kind {
                     tokens.next();
                     return Some(Node::Array {
+                        status: ArrayStatus::Valid,
                         children,
                         start,
                         end: token.end,
@@ -240,6 +241,7 @@ where
                 TokenType::RightBracket => {
                     tokens.next();
                     return Some(Node::Array {
+                        status: ArrayStatus::Valid,
                         children,
                         start,
                         end: token.end,
@@ -253,11 +255,22 @@ where
                     panic!("Not implemented yet");
                 }
             },
-            ArrayStates::Comma => {
-                let val = inner_parse_value(tokens);
-                children.push(val.unwrap());
-                state = ArrayStates::Node;
-            }
+            ArrayStates::Comma => match token.kind {
+                TokenType::RightBracket => {
+                    tokens.next();
+                    return Some(Node::Array {
+                        status: ArrayStatus::TrailingComma,
+                        children,
+                        start,
+                        end: token.end,
+                    });
+                }
+                _ => {
+                    let val = inner_parse_value(tokens);
+                    children.push(val.unwrap());
+                    state = ArrayStates::Node;
+                }
+            },
         }
     }
 

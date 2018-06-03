@@ -120,6 +120,7 @@ JSON:
 Value:
 Success {
     tree: Array {
+        status: Valid,
         children: [
             Object {
                 children: [
@@ -881,6 +882,7 @@ Success {
                             }
                         },
                         value: Array {
+                            status: Valid,
                             children: [
                                 String {
                                     raw: "veniam",
@@ -986,6 +988,7 @@ Success {
                             }
                         },
                         value: Array {
+                            status: Valid,
                             children: [
                                 Number {
                                     raw: "0",
@@ -1156,6 +1159,7 @@ Success {
                             }
                         },
                         value: Array {
+                            status: Valid,
                             children: [
                                 Object {
                                     children: [
@@ -2306,6 +2310,7 @@ Success {
                             }
                         },
                         value: Array {
+                            status: Valid,
                             children: [
                                 String {
                                     raw: "qui",
@@ -2411,6 +2416,7 @@ Success {
                             }
                         },
                         value: Array {
+                            status: Valid,
                             children: [
                                 Number {
                                     raw: "0",
@@ -2581,6 +2587,7 @@ Success {
                             }
                         },
                         value: Array {
+                            status: Valid,
                             children: [
                                 Object {
                                     children: [

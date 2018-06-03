@@ -82,6 +82,28 @@ fn missing_and_trailing_comma() {
   assert!(true);
 }
 
+#[test]
+fn array_trailing_comma_1() {
+  parse(r##"
+    [1, 2, 3,]
+  "##);
+  assert!(true);
+}
+
+#[test]
+fn array_trailing_comma_2() {
+  parse(r##"{
+    "foo": [
+      1,
+      2,
+      3,
+      4,
+    ]
+  }
+  "##);
+  assert!(true);
+}
+
 // #[test]
 // fn fail_0() {
 //   parse(r##""##);

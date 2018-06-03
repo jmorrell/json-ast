@@ -4,8 +4,10 @@ JSON:
 Value:
 Success {
     tree: Array {
+        status: Valid,
         children: [
             Array {
+                status: Valid,
                 children: [],
                 start: Position {
                     line: 1,

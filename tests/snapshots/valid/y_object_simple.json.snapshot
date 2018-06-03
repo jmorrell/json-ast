@@ -21,6 +21,7 @@ Success {
                     }
                 },
                 value: Array {
+                    status: Valid,
                     children: [],
                     start: Position {
                         line: 1,
