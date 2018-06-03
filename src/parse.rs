@@ -10,6 +10,7 @@ enum ObjectStates {
     Property,
     Comma,
     TrailingComma,
+    Done(Position),
 }
 
 #[derive(Debug)]
@@ -102,11 +103,7 @@ where
             ObjectStates::OpenObject => {
                 if let TokenType::RightBrace = token.kind {
                     tokens.next();
-                    return Some(Node::Object {
-                        children,
-                        start,
-                        end: token.end,
-                    });
+                    state = ObjectStates::Done(token.end);
                 } else {
                     let val = parse_property(tokens);
                     // TODO: remove unwrap
@@ -132,11 +129,7 @@ where
                 // Closed object
                 TokenType::RightBrace => {
                     tokens.next();
-                    return Some(Node::Object {
-                        children,
-                        start,
-                        end: token.end,
-                    });
+                    state = ObjectStates::Done(token.end);
                 }
                 // Missing comma between properties
                 TokenType::String => {
@@ -174,16 +167,23 @@ where
                         end: child.end,
                     });
                     tokens.next();
-                    return Some(Node::Object {
-                        children,
-                        start,
-                        end: token.end,
-                    });
+                    state = ObjectStates::Done(token.end);
                 } else {
                     panic!("Expected Right brace");
                 }
             }
+            ObjectStates::Done(_) => {
+                break;
+            }
         }
+    }
+
+    if let ObjectStates::Done(end) = state {
+        return Some(Node::Object {
+            children,
+            start,
+            end,
+        });
     }
 
     // Reached the end of tokens
