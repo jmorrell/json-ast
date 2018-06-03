@@ -10,29 +10,34 @@ use std::ffi::OsString;
 
 #[test]
 fn trailing_comma_1() {
-  parse(r##"{
+  parse(
+    r##"{
     "test": {
       "foo": "bar",
     }
-  }"##);
+  }"##,
+  );
   assert!(true);
 }
 
 #[test]
 fn trailing_comma_2() {
-  parse(r##"{
+  parse(
+    r##"{
     "test": {
       "foo": "one",
       "bar": "two",
       "baz": 123,
     }
-  }"##);
+  }"##,
+  );
   assert!(true);
 }
 
 #[test]
 fn trailing_comma_3() {
-  parse(r##"{
+  parse(
+    r##"{
     "test": {
       "foo": "one",
       "bar": "two",
@@ -41,24 +46,28 @@ fn trailing_comma_3() {
         "new": "object",
       },
     }
-  }"##);
+  }"##,
+  );
   assert!(true);
 }
 
 #[test]
 fn missing_comma_1() {
-  parse(r##"{
+  parse(
+    r##"{
     "test": {
       "a": 1
       "b": 2
     }
-  }"##);
+  }"##,
+  );
   assert!(true);
 }
 
 #[test]
 fn missing_comma_2() {
-  parse(r##"{
+  parse(
+    r##"{
     "test": {
       "a": 1
       "baz": {
@@ -67,40 +76,92 @@ fn missing_comma_2() {
       },
       "b": 2
     }
-  }"##);
+  }"##,
+  );
   assert!(true);
 }
 
 #[test]
 fn missing_and_trailing_comma() {
-  parse(r##"{
+  parse(
+    r##"{
     "test": {
       "a": 1
       "b": 2,
     }
-  }"##);
+  }"##,
+  );
   assert!(true);
 }
 
 #[test]
 fn array_trailing_comma_1() {
-  parse(r##"
+  parse(
+    r##"
     [1, 2, 3,]
-  "##);
+  "##,
+  );
   assert!(true);
 }
 
 #[test]
 fn array_trailing_comma_2() {
-  parse(r##"{
+  parse(
+    r##"{
     "foo": [
       1,
       2,
       3,
       4,
     ]
-  }
-  "##);
+  }"##,
+  );
+  assert!(true);
+}
+
+#[test]
+fn array_missing_comma_1() {
+  parse(
+    r##"
+    [1, 2 3]
+  "##,
+  );
+  assert!(true);
+}
+
+#[test]
+fn array_missing_comma_2() {
+  parse(
+    r##"[
+    { "foo": 1 }
+    { "bar": 2 }
+  ]"##,
+  );
+  assert!(true);
+}
+
+#[test]
+fn array_missing_comma_3() {
+  parse(
+    r##"{
+    "foo": [ 1 2 3 4 ]
+  }"##,
+  );
+  assert!(true);
+}
+
+#[test]
+fn array_missing_and_trailing_comma() {
+  parse(
+    r##"{
+    "foo": [ 
+      1 
+      2 
+      3 
+      4, 
+    ]
+  }"##,
+  );
   assert!(true);
 }
 
@@ -113,8 +174,8 @@ fn array_trailing_comma_2() {
 // #[test]
 // fn fail_0b() {
 //   parse(
-//     r##"  
-      
+//     r##"
+
 //       "##,
 //   );
 //   assert!(true);

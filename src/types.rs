@@ -28,11 +28,17 @@ pub struct Token {
     pub end: Position,
 }
 
+
+#[derive(Clone, Debug)]
+pub enum ArrayError {
+    TrailingComma(Position),
+    MissingComma(Position),
+}
+
 #[derive(Clone, Debug)]
 pub enum ArrayStatus {
     Valid,
-    TrailingComma,
-    MissingComma,
+    Invalid(Vec<ArrayError>),
 }
 
 #[derive(Clone, Debug)]
@@ -68,6 +74,19 @@ pub enum Node {
         start: Position,
         end: Position,
     },
+}
+
+impl Node {
+    pub fn end(&self) -> Position {
+        match self {
+            &Node::Object { end, .. } => end,
+            &Node::Array { end, .. } => end,
+            &Node::String { end, .. } => end,
+            &Node::Number { end, .. } => end,
+            &Node::Boolean { end, .. } => end,
+            &Node::Null { end, .. } => end,
+        }
+    }
 }
 
 #[derive(Clone, Debug)]

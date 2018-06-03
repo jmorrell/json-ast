@@ -1,4 +1,5 @@
-use types::{ArrayStatus, Identifier, Node, Parsed, Property, PropertyStatus, Token, TokenType};
+use types::{ArrayError, ArrayStatus, Identifier, Node, Parsed, Position, Property, PropertyStatus,
+            Token, TokenType};
 
 use std::iter::{Iterator, Peekable};
 
@@ -15,8 +16,9 @@ enum ObjectStates {
 enum ArrayStates {
     Start,
     OpenArray,
-    Node,
+    Node(Position),
     Comma,
+    Done(Position),
 }
 
 #[derive(Debug)]
@@ -65,20 +67,13 @@ where
             }
             PropertyStates::Key => {
                 if let Some(value) = inner_parse_value(tokens) {
-                    let end = match value {
-                        Node::Object { end, .. } => end,
-                        Node::Array { end, .. } => end,
-                        Node::String { end, .. } => end,
-                        Node::Number { end, .. } => end,
-                        Node::Boolean { end, .. } => end,
-                        Node::Null { end, .. } => end,
-                    };
+                    let end = value.end();
                     return Some(Property {
                         status: PropertyStatus::Valid,
                         key,
                         value,
                         start,
-                        end,
+                        end: end,
                     });
                 } else {
                     return None;
@@ -208,6 +203,7 @@ where
 {
     let mut state = ArrayStates::Start;
     let mut children: Vec<Node> = vec![];
+    let mut errors: Vec<ArrayError> = vec![];
     let start = tokens.peek().unwrap().start;
 
     while let Some(&token) = tokens.peek() {
@@ -224,53 +220,72 @@ where
             ArrayStates::OpenArray => {
                 if let TokenType::RightBracket = token.kind {
                     tokens.next();
-                    return Some(Node::Array {
-                        status: ArrayStatus::Valid,
-                        children,
-                        start,
-                        end: token.end,
-                    });
+                    state = ArrayStates::Done(token.end);
                 } else {
-                    let val = inner_parse_value(tokens);
                     // TODO: remove unwrap
-                    children.push(val.unwrap());
-                    state = ArrayStates::Node;
+                    let val = inner_parse_value(tokens).unwrap();
+                    let end = val.end();
+                    children.push(val);
+                    state = ArrayStates::Node(end);
                 }
             }
-            ArrayStates::Node => match token.kind {
+            ArrayStates::Node(position) => match token.kind {
                 TokenType::RightBracket => {
                     tokens.next();
-                    return Some(Node::Array {
-                        status: ArrayStatus::Valid,
-                        children,
-                        start,
-                        end: token.end,
-                    });
+                    state = ArrayStates::Done(token.end);
                 }
                 TokenType::Comma => {
                     tokens.next();
                     state = ArrayStates::Comma;
                 }
-                _ => {
-                    panic!("Not implemented yet");
+                TokenType::LeftBrace
+                | TokenType::LeftBracket
+                | TokenType::String
+                | TokenType::Number
+                | TokenType::True
+                | TokenType::False
+                | TokenType::Null => {
+                    errors.push(ArrayError::MissingComma(position));
+                    state = ArrayStates::Comma;
+                }
+                TokenType::RightBrace | TokenType::Colon => {
+                    panic!("Unexpected tokens");
                 }
             },
             ArrayStates::Comma => match token.kind {
                 TokenType::RightBracket => {
                     tokens.next();
-                    return Some(Node::Array {
-                        status: ArrayStatus::TrailingComma,
-                        children,
-                        start,
-                        end: token.end,
-                    });
+                    errors.push(ArrayError::TrailingComma(token.end));
+                    state = ArrayStates::Done(token.end);
                 }
                 _ => {
-                    let val = inner_parse_value(tokens);
-                    children.push(val.unwrap());
-                    state = ArrayStates::Node;
+                    let val = inner_parse_value(tokens).unwrap();
+                    let end = val.end();
+                    children.push(val);
+                    state = ArrayStates::Node(end);
                 }
             },
+            ArrayStates::Done(_) => {
+                break;
+            }
+        }
+    }
+
+    if let ArrayStates::Done(position) = state {
+        if errors.len() == 0 {
+            return Some(Node::Array {
+                status: ArrayStatus::Valid,
+                children,
+                start,
+                end: position,
+            });
+        } else {
+            return Some(Node::Array {
+                status: ArrayStatus::Invalid(errors),
+                children,
+                start,
+                end: position,
+            });
         }
     }
 
