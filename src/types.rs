@@ -11,6 +11,12 @@ pub enum TokenType {
     True,         // true
     False,        // false
     Null,         // null
+
+    // Not valid in JSON spec
+//     InvalidLiteral, // ex: truth unquoted-string
+//     InvalidSingleQuoteString, // 'foo'
+//     InvalidComment, // JS-style comments
+//     InvalidNumber, // ex: NaN, -012, Inf
 }
 
 #[derive(Copy, Clone, Debug)]
@@ -60,6 +66,11 @@ pub enum Node {
         start: Position,
         end: Position,
     },
+    // InvalidComment {
+    //     raw: String,
+    //     start: Position,
+    //     end: Position,
+    // }
 }
 
 #[derive(Clone, Debug)]
@@ -68,6 +79,7 @@ pub struct Property {
     pub value: Node,
     pub start: Position,
     pub end: Position,
+    pub trailing_comma: bool,
 }
 
 #[derive(Clone, Debug)]
