@@ -24,8 +24,8 @@ enum ArrayStates {
 #[derive(Debug)]
 enum PropertyStates {
     Start,
-    Key,
-    Colon,
+    Key(Identifier),
+    Colon(Identifier),
 }
 
 fn parse_property<'a, It>(tokens: &mut Peekable<It>) -> Option<Property>
@@ -34,38 +34,32 @@ where
 {
     let mut state = PropertyStates::Start;
     let start = tokens.peek().unwrap().start;
-    let mut key = Identifier {
-        raw: "".to_string(),
-        start,
-        end: start,
-    };
 
     while let Some(&token) = tokens.peek() {
         match state {
             PropertyStates::Start => {
                 if let TokenType::String = token.kind {
-                    key = Identifier {
+                    tokens.next();
+                    state = PropertyStates::Colon(Identifier {
                         raw: token.clone().value.unwrap(),
                         start: token.start,
                         end: token.end,
-                    };
-                    tokens.next();
-                    state = PropertyStates::Colon;
+                    });
                 } else {
                     return None;
                 }
             }
-            PropertyStates::Colon => {
+            PropertyStates::Colon(key) => {
                 if let TokenType::Colon = token.kind {
                     tokens.next();
-                    state = PropertyStates::Key;
+                    state = PropertyStates::Key(key);
                 } else {
                     // property String was not followed by a Colon
                     panic!("not implemented yet");
                     // invalid property
                 }
             }
-            PropertyStates::Key => {
+            PropertyStates::Key(key) => {
                 if let Some(value) = inner_parse_value(tokens) {
                     let end = value.end();
                     return Some(Property {
@@ -73,7 +67,7 @@ where
                         key,
                         value,
                         start,
-                        end: end,
+                        end,
                     });
                 } else {
                     return None;
