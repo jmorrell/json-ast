@@ -126,6 +126,7 @@ where
                 }
             }
             ObjectStates::Property => match token.kind {
+                // Comma follows property
                 TokenType::Comma => {
                     tokens.next();
                     // If the next token is a right brace, then we have a trailing comma
@@ -139,6 +140,7 @@ where
                         state = ObjectStates::Comma;
                     }
                 }
+                // Closed object
                 TokenType::RightBrace => {
                     tokens.next();
                     return Some(Node::Object {
@@ -147,8 +149,19 @@ where
                         end: token.end,
                     });
                 }
-                // invalid object, expected , or }
-                _ => panic!("not implemented"),
+                // Missing comma between properties
+                TokenType::String => {
+                    let child = children.pop().unwrap();
+                    children.push(Property {
+                        status: PropertyStatus::MissingComma,
+                        key: child.key,
+                        value: child.value,
+                        start: child.start,
+                        end: child.end,
+                    });
+                    state = ObjectStates::Comma;
+                }
+                _ => panic!("not implemented")
             },
             ObjectStates::Comma => {
                 let val = parse_property(tokens);
@@ -156,7 +169,6 @@ where
                     children.push(value);
                     state = ObjectStates::Property;
                 } else {
-                    // trailing commas end up here
                     panic!("not implemented")
                 }
             }

@@ -66,6 +66,7 @@ pub enum Node {
 pub enum PropertyStatus {
     Valid,
     TrailingComma,
+    MissingComma,
 }
 
 #[derive(Clone, Debug)]

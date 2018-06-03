@@ -45,6 +45,28 @@ fn trailing_comma_3() {
   assert!(true);
 }
 
+#[test]
+fn missing_comma_1() {
+  parse(r##"{
+    "test": {
+      "a": 1
+      "b": 2
+    }
+  }"##);
+  assert!(true);
+}
+
+#[test]
+fn missing_and_trailing_comma() {
+  parse(r##"{
+    "test": {
+      "a": 1
+      "b": 2,
+    }
+  }"##);
+  assert!(true);
+}
+
 // #[test]
 // fn fail_0() {
 //   parse(r##""##);
