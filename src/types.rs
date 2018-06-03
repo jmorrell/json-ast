@@ -63,25 +63,18 @@ pub enum Node {
 }
 
 #[derive(Clone, Debug)]
-pub enum InvalidPropertyReason {
+pub enum PropertyStatus {
+    Valid,
     TrailingComma,
 }
 
 #[derive(Clone, Debug)]
-pub enum Property {
-    Valid {
-        key: Identifier,
-        value: Node,
-        start: Position,
-        end: Position,
-    },
-    Invalid {
-        error: InvalidPropertyReason,
-        key: Identifier,
-        value: Node,
-        start: Position,
-        end: Position, 
-    },
+pub struct Property {
+    pub status: PropertyStatus,
+    pub key: Identifier,
+    pub value: Node,
+    pub start: Position,
+    pub end: Position,
 }
 
 #[derive(Clone, Debug)]

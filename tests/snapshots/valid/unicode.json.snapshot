@@ -26,7 +26,8 @@ Success {
             },
             Object {
                 children: [
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "\\u00A9",
                             start: Position {
@@ -91,7 +92,8 @@ Success {
             },
             Object {
                 children: [
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "\\uDBFF\\uDFFF",
                             start: Position {

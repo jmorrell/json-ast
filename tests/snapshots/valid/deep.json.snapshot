@@ -34,7 +34,8 @@ Value:
 Success {
     tree: Object {
         children: [
-            Valid {
+            Property {
+                status: Valid,
                 key: Identifier {
                     raw: "a",
                     start: Position {
@@ -50,7 +51,8 @@ Success {
                 },
                 value: Object {
                     children: [
-                        Valid {
+                        Property {
+                            status: Valid,
                             key: Identifier {
                                 raw: "b",
                                 start: Position {
@@ -66,7 +68,8 @@ Success {
                             },
                             value: Object {
                                 children: [
-                                    Valid {
+                                    Property {
+                                        status: Valid,
                                         key: Identifier {
                                             raw: "c",
                                             start: Position {
@@ -82,7 +85,8 @@ Success {
                                         },
                                         value: Object {
                                             children: [
-                                                Valid {
+                                                Property {
+                                                    status: Valid,
                                                     key: Identifier {
                                                         raw: "d",
                                                         start: Position {
@@ -98,7 +102,8 @@ Success {
                                                     },
                                                     value: Object {
                                                         children: [
-                                                            Valid {
+                                                            Property {
+                                                                status: Valid,
                                                                 key: Identifier {
                                                                     raw: "e",
                                                                     start: Position {
@@ -114,7 +119,8 @@ Success {
                                                                 },
                                                                 value: Object {
                                                                     children: [
-                                                                        Valid {
+                                                                        Property {
+                                                                            status: Valid,
                                                                             key: Identifier {
                                                                                 raw: "f",
                                                                                 start: Position {
@@ -130,7 +136,8 @@ Success {
                                                                             },
                                                                             value: Object {
                                                                                 children: [
-                                                                                    Valid {
+                                                                                    Property {
+                                                                                        status: Valid,
                                                                                         key: Identifier {
                                                                                             raw: "g",
                                                                                             start: Position {

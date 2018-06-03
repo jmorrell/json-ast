@@ -8,15 +8,15 @@ use json_ast::parse;
 use std::env;
 use std::ffi::OsString;
 
-// #[test]
-// fn trailing_comma() {
-//   parse(r##"{
-//     "test": {
-//       "foo": "bar",
-//     }
-//   }"##);
-//   assert!(true);
-// }
+#[test]
+fn trailing_comma() {
+  parse(r##"{
+    "test": {
+      "foo": "bar",
+    }
+  }"##);
+  assert!(true);
+}
 
 // #[test]
 // fn fail_0() {

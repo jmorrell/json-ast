@@ -7,7 +7,8 @@ Value:
 Success {
     tree: Object {
         children: [
-            Valid {
+            Property {
+                status: Valid,
                 key: Identifier {
                     raw: "a",
                     start: Position {

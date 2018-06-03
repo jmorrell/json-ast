@@ -1,4 +1,4 @@
-use types::{Identifier, Node, Parsed, Property, Token, TokenType};
+use types::{Identifier, Node, Parsed, Property, PropertyStatus, Token, TokenType};
 
 use std::iter::{Iterator, Peekable};
 
@@ -8,6 +8,7 @@ enum ObjectStates {
     OpenObject,
     Property,
     Comma,
+    TrailingComma,
 }
 
 #[derive(Debug)]
@@ -72,7 +73,8 @@ where
                         Node::Boolean { end, .. } => end,
                         Node::Null { end, .. } => end,
                     };
-                    return Some(Property::Valid {
+                    return Some(Property {
+                        status: PropertyStatus::Valid,
                         key,
                         value,
                         start,
@@ -126,7 +128,16 @@ where
             ObjectStates::Property => match token.kind {
                 TokenType::Comma => {
                     tokens.next();
-                    state = ObjectStates::Comma;
+                    // If the next token is a right brace, then we have a trailing comma
+                    if let Some(&next_token) = tokens.peek() {
+                        if let TokenType::RightBrace = next_token.kind {
+                            state = ObjectStates::TrailingComma;
+                        } else {
+                            state = ObjectStates::Comma;
+                        }
+                    } else {
+                        state = ObjectStates::Comma;
+                    }
                 }
                 TokenType::RightBrace => {
                     tokens.next();
@@ -147,6 +158,28 @@ where
                 } else {
                     // trailing commas end up here
                     panic!("not implemented")
+                }
+            }
+            ObjectStates::TrailingComma => {
+                // We should only end up here if the next token is a Right Brace
+                if let TokenType::RightBrace = token.kind {
+                    // replace the last parsed child with an invalid property
+                    let child = children.pop().unwrap();
+                    children.push(Property {
+                        status: PropertyStatus::TrailingComma,
+                        key: child.key,
+                        value: child.value,
+                        start: child.start,
+                        end: child.end,
+                    });
+                    tokens.next();
+                    return Some(Node::Object {
+                        children,
+                        start,
+                        end: token.end,
+                    });
+                } else {
+                    panic!("Expected Right brace");
                 }
             }
         }

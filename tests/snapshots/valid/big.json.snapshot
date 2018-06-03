@@ -123,7 +123,8 @@ Success {
         children: [
             Object {
                 children: [
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "_id",
                             start: Position {
@@ -161,7 +162,8 @@ Success {
                             index: 43
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "index",
                             start: Position {
@@ -199,7 +201,8 @@ Success {
                             index: 59
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "guid",
                             start: Position {
@@ -237,7 +240,8 @@ Success {
                             index: 111
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "isActive",
                             start: Position {
@@ -275,7 +279,8 @@ Success {
                             index: 133
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "balance",
                             start: Position {
@@ -313,7 +318,8 @@ Success {
                             index: 161
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "picture",
                             start: Position {
@@ -351,7 +357,8 @@ Success {
                             index: 205
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "age",
                             start: Position {
@@ -389,7 +396,8 @@ Success {
                             index: 220
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "eyeColor",
                             start: Position {
@@ -427,7 +435,8 @@ Success {
                             index: 245
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "name",
                             start: Position {
@@ -443,7 +452,8 @@ Success {
                         },
                         value: Object {
                             children: [
-                                Valid {
+                                Property {
+                                    status: Valid,
                                     key: Identifier {
                                         raw: "first",
                                         start: Position {
@@ -481,7 +491,8 @@ Success {
                                         index: 284
                                     }
                                 },
-                                Valid {
+                                Property {
+                                    status: Valid,
                                     key: Identifier {
                                         raw: "last",
                                         start: Position {
@@ -542,7 +553,8 @@ Success {
                             index: 315
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "company",
                             start: Position {
@@ -580,7 +592,8 @@ Success {
                             index: 339
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "email",
                             start: Position {
@@ -618,7 +631,8 @@ Success {
                             index: 380
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "phone",
                             start: Position {
@@ -656,7 +670,8 @@ Success {
                             index: 414
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "address",
                             start: Position {
@@ -694,7 +709,8 @@ Success {
                             index: 484
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "about",
                             start: Position {
@@ -732,7 +748,8 @@ Success {
                             index: 850
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "registered",
                             start: Position {
@@ -770,7 +787,8 @@ Success {
                             index: 903
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "latitude",
                             start: Position {
@@ -808,7 +826,8 @@ Success {
                             index: 932
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "longitude",
                             start: Position {
@@ -846,7 +865,8 @@ Success {
                             index: 963
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "tags",
                             start: Position {
@@ -950,7 +970,8 @@ Success {
                             index: 1053
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "range",
                             start: Position {
@@ -1119,7 +1140,8 @@ Success {
                             index: 1164
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "friends",
                             start: Position {
@@ -1137,7 +1159,8 @@ Success {
                             children: [
                                 Object {
                                     children: [
-                                        Valid {
+                                        Property {
+                                            status: Valid,
                                             key: Identifier {
                                                 raw: "id",
                                                 start: Position {
@@ -1175,7 +1198,8 @@ Success {
                                                 index: 1206
                                             }
                                         },
-                                        Valid {
+                                        Property {
+                                            status: Valid,
                                             key: Identifier {
                                                 raw: "name",
                                                 start: Position {
@@ -1227,7 +1251,8 @@ Success {
                                 },
                                 Object {
                                     children: [
-                                        Valid {
+                                        Property {
+                                            status: Valid,
                                             key: Identifier {
                                                 raw: "id",
                                                 start: Position {
@@ -1265,7 +1290,8 @@ Success {
                                                 index: 1276
                                             }
                                         },
-                                        Valid {
+                                        Property {
+                                            status: Valid,
                                             key: Identifier {
                                                 raw: "name",
                                                 start: Position {
@@ -1317,7 +1343,8 @@ Success {
                                 },
                                 Object {
                                     children: [
-                                        Valid {
+                                        Property {
+                                            status: Valid,
                                             key: Identifier {
                                                 raw: "id",
                                                 start: Position {
@@ -1355,7 +1382,8 @@ Success {
                                                 index: 1341
                                             }
                                         },
-                                        Valid {
+                                        Property {
+                                            status: Valid,
                                             key: Identifier {
                                                 raw: "name",
                                                 start: Position {
@@ -1428,7 +1456,8 @@ Success {
                             index: 1390
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "greeting",
                             start: Position {
@@ -1466,7 +1495,8 @@ Success {
                             index: 1452
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "favoriteFruit",
                             start: Position {
@@ -1518,7 +1548,8 @@ Success {
             },
             Object {
                 children: [
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "_id",
                             start: Position {
@@ -1556,7 +1587,8 @@ Success {
                             index: 1530
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "index",
                             start: Position {
@@ -1594,7 +1626,8 @@ Success {
                             index: 1546
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "guid",
                             start: Position {
@@ -1632,7 +1665,8 @@ Success {
                             index: 1598
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "isActive",
                             start: Position {
@@ -1670,7 +1704,8 @@ Success {
                             index: 1621
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "balance",
                             start: Position {
@@ -1708,7 +1743,8 @@ Success {
                             index: 1649
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "picture",
                             start: Position {
@@ -1746,7 +1782,8 @@ Success {
                             index: 1693
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "age",
                             start: Position {
@@ -1784,7 +1821,8 @@ Success {
                             index: 1708
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "eyeColor",
                             start: Position {
@@ -1822,7 +1860,8 @@ Success {
                             index: 1732
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "name",
                             start: Position {
@@ -1838,7 +1877,8 @@ Success {
                         },
                         value: Object {
                             children: [
-                                Valid {
+                                Property {
+                                    status: Valid,
                                     key: Identifier {
                                         raw: "first",
                                         start: Position {
@@ -1876,7 +1916,8 @@ Success {
                                         index: 1768
                                     }
                                 },
-                                Valid {
+                                Property {
+                                    status: Valid,
                                     key: Identifier {
                                         raw: "last",
                                         start: Position {
@@ -1937,7 +1978,8 @@ Success {
                             index: 1798
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "company",
                             start: Position {
@@ -1975,7 +2017,8 @@ Success {
                             index: 1824
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "email",
                             start: Position {
@@ -2013,7 +2056,8 @@ Success {
                             index: 1863
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "phone",
                             start: Position {
@@ -2051,7 +2095,8 @@ Success {
                             index: 1897
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "address",
                             start: Position {
@@ -2089,7 +2134,8 @@ Success {
                             index: 1954
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "about",
                             start: Position {
@@ -2127,7 +2173,8 @@ Success {
                             index: 2339
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "registered",
                             start: Position {
@@ -2165,7 +2212,8 @@ Success {
                             index: 2394
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "latitude",
                             start: Position {
@@ -2203,7 +2251,8 @@ Success {
                             index: 2424
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "longitude",
                             start: Position {
@@ -2241,7 +2290,8 @@ Success {
                             index: 2454
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "tags",
                             start: Position {
@@ -2345,7 +2395,8 @@ Success {
                             index: 2547
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "range",
                             start: Position {
@@ -2514,7 +2565,8 @@ Success {
                             index: 2658
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "friends",
                             start: Position {
@@ -2532,7 +2584,8 @@ Success {
                             children: [
                                 Object {
                                     children: [
-                                        Valid {
+                                        Property {
+                                            status: Valid,
                                             key: Identifier {
                                                 raw: "id",
                                                 start: Position {
@@ -2570,7 +2623,8 @@ Success {
                                                 index: 2700
                                             }
                                         },
-                                        Valid {
+                                        Property {
+                                            status: Valid,
                                             key: Identifier {
                                                 raw: "name",
                                                 start: Position {
@@ -2622,7 +2676,8 @@ Success {
                                 },
                                 Object {
                                     children: [
-                                        Valid {
+                                        Property {
+                                            status: Valid,
                                             key: Identifier {
                                                 raw: "id",
                                                 start: Position {
@@ -2660,7 +2715,8 @@ Success {
                                                 index: 2766
                                             }
                                         },
-                                        Valid {
+                                        Property {
+                                            status: Valid,
                                             key: Identifier {
                                                 raw: "name",
                                                 start: Position {
@@ -2712,7 +2768,8 @@ Success {
                                 },
                                 Object {
                                     children: [
-                                        Valid {
+                                        Property {
+                                            status: Valid,
                                             key: Identifier {
                                                 raw: "id",
                                                 start: Position {
@@ -2750,7 +2807,8 @@ Success {
                                                 index: 2832
                                             }
                                         },
-                                        Valid {
+                                        Property {
+                                            status: Valid,
                                             key: Identifier {
                                                 raw: "name",
                                                 start: Position {
@@ -2823,7 +2881,8 @@ Success {
                             index: 2879
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "greeting",
                             start: Position {
@@ -2861,7 +2920,8 @@ Success {
                             index: 2938
                         }
                     },
-                    Valid {
+                    Property {
+                        status: Valid,
                         key: Identifier {
                             raw: "favoriteFruit",
                             start: Position {
