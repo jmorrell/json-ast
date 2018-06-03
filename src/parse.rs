@@ -40,16 +40,22 @@ where
     while let Some(&token) = tokens.peek() {
         match state {
             PropertyStates::Start => {
-                if let TokenType::String = token.kind {
-                    key = Identifier {
-                        raw: token.clone().value.unwrap(),
-                        start: token.start,
-                        end: token.end,
-                    };
-                    tokens.next();
-                    state = PropertyStates::Colon;
-                } else {
-                    return None;
+                match token.kind {
+                    TokenType::String => {
+                        key = Identifier {
+                            raw: token.clone().value.unwrap(),
+                            start: token.start,
+                            end: token.end,
+                        };
+                        tokens.next();
+                        state = PropertyStates::Colon;
+                    },
+                    // TokenType::Comma => {
+                    //     panic!("trailing comma");
+                    // },
+                    _ => {
+                        return None;
+                    }
                 }
             }
             PropertyStates::Colon => {
@@ -72,13 +78,32 @@ where
                         Node::Boolean { end, .. } => end,
                         Node::Null { end, .. } => end,
                     };
-                    return Some(Property {
-                        key,
-                        value,
-                        start,
-                        end,
-                    });
+
+                    if let Some(&token) = tokens.peek() {
+                        match token.kind {
+                            TokenType::Comma => {
+                            tokens.next();
+                                return Some(Property {
+                                    key,
+                                    value,
+                                    start,
+                                    end: token.end,
+                                    trailing_comma: true,
+                                });
+                            },
+                            _ => {
+                                return Some(Property {
+                                    key,
+                                    value,
+                                    start,
+                                    end,
+                                    trailing_comma: false,
+                                });
+                            }
+                        }
+                    } 
                 } else {
+                    // couldn't parse a value...
                     return None;
                 }
             }

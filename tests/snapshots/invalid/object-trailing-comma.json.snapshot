@@ -1,0 +1,62 @@
+JSON:
+{
+  "a": 1,
+}
+
+
+Value:
+Success {
+    tree: Object {
+        children: [
+            Property {
+                key: Identifier {
+                    raw: "a",
+                    start: Position {
+                        line: 2,
+                        column: 3,
+                        index: 4
+                    },
+                    end: Position {
+                        line: 2,
+                        column: 6,
+                        index: 7
+                    }
+                },
+                value: Number {
+                    raw: "1",
+                    start: Position {
+                        line: 2,
+                        column: 8,
+                        index: 9
+                    },
+                    end: Position {
+                        line: 2,
+                        column: 9,
+                        index: 10
+                    }
+                },
+                start: Position {
+                    line: 2,
+                    column: 3,
+                    index: 4
+                },
+                end: Position {
+                    line: 2,
+                    column: 10,
+                    index: 11
+                },
+                trailing_comma: true
+            }
+        ],
+        start: Position {
+            line: 1,
+            column: 1,
+            index: 0
+        },
+        end: Position {
+            line: 3,
+            column: 2,
+            index: 13
+        }
+    }
+}

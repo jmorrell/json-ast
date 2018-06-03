@@ -8,15 +8,15 @@ use json_ast::parse;
 use std::env;
 use std::ffi::OsString;
 
-// #[test]
-// fn trailing_comma() {
-//   parse(r##"{
-//     "test": {
-//       "foo": "bar",
-//     }
-//   }"##);
-//   assert!(true);
-// }
+#[test]
+fn trailing_comma() {
+  parse(r##"{
+    "test": {
+      "foo": "bar",
+    }
+  }"##);
+  assert!(true);
+}
 
 // #[test]
 // fn fail_0() {
@@ -186,6 +186,23 @@ fn snapshots() {
   }
 }
 
+#[test]
+fn invalid_snapshots() {
+  match env::var_os("BUILD_SNAPSHOTS") {
+    Some(val) => {
+      if val == OsString::from("true") {
+        build_invalid_snapshots();
+        assert!(true);
+      } else {
+        test_invalid_snapshots();
+      }
+    }
+    _ => {
+      test_invalid_snapshots();
+    }
+  }
+}
+
 fn build_snapshots() {
   for entry in fs::read_dir(Path::new("./tests/fixtures/valid/")).unwrap() {
     let entry = entry.unwrap();
@@ -195,6 +212,21 @@ fn build_snapshots() {
 
 fn test_snapshots() {
   for entry in fs::read_dir(Path::new("./tests/fixtures/valid/")).unwrap() {
+    let entry = entry.unwrap();
+    test_snapshot(entry);
+  }
+  assert!(true);
+}
+
+fn build_invalid_snapshots() {
+  for entry in fs::read_dir(Path::new("./tests/fixtures/invalid/")).unwrap() {
+    let entry = entry.unwrap();
+    create_invalid_snapshot(entry);
+  }
+}
+
+fn test_invalid_snapshots() {
+  for entry in fs::read_dir(Path::new("./tests/fixtures/invalid/")).unwrap() {
     let entry = entry.unwrap();
     test_snapshot(entry);
   }
@@ -232,6 +264,17 @@ fn create_snapshot(entry: DirEntry) {
   let snapshot = format_snapshot(entry);
   let out = format!(
     "./tests/snapshots/valid/{}.snapshot",
+    name.into_string().unwrap()
+  );
+  let mut f = File::create(out).unwrap();
+  f.write_all(snapshot.as_bytes()).unwrap();
+}
+
+fn create_invalid_snapshot(entry: DirEntry) {
+  let name = entry.file_name();
+  let snapshot = format_snapshot(entry);
+  let out = format!(
+    "./tests/snapshots/invalid/{}.snapshot",
     name.into_string().unwrap()
   );
   let mut f = File::create(out).unwrap();
