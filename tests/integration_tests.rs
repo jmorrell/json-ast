@@ -9,10 +9,37 @@ use std::env;
 use std::ffi::OsString;
 
 #[test]
-fn trailing_comma() {
+fn trailing_comma_1() {
   parse(r##"{
     "test": {
       "foo": "bar",
+    }
+  }"##);
+  assert!(true);
+}
+
+#[test]
+fn trailing_comma_2() {
+  parse(r##"{
+    "test": {
+      "foo": "one",
+      "bar": "two",
+      "baz": 123,
+    }
+  }"##);
+  assert!(true);
+}
+
+#[test]
+fn trailing_comma_3() {
+  parse(r##"{
+    "test": {
+      "foo": "one",
+      "bar": "two",
+      "baz": {
+        "a": "whole",
+        "new": "object",
+      },
     }
   }"##);
   assert!(true);
